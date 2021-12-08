@@ -2,6 +2,7 @@
 #include <malloc.h>
 #include <string.h>
 #include <ctype.h>
+#define MAX_LEN 128
 
 
 
@@ -12,7 +13,9 @@ float newa;
 float newb;
 float newc;
 
-int checker(char *a, char *b, char *c, int n);
+void print_image(FILE *fptr);
+
+int checker(char *a, int n);
 
 void switche(int n);
 
@@ -26,41 +29,41 @@ int main() {
     int weiter = 0;
     while (weiter == 0) {
 
+        char *filename = "image.txt";
+        FILE *fptr = NULL;
 
+        if((fptr = fopen(filename,"r")) == NULL)
+        {
+            fprintf(stderr,"error opening %s\n",filename);
+            return 1;
+        }
+
+        print_image(fptr);
+
+        fclose(fptr);
 
         printf("******************************************************************\n");
-        printf("\t\t Taschenrechner - \n");
+        printf("\t\t Taschenrechner \n");
         printf("******************************************************************\n");
         printf("NYP, 2021\n");
         printf("mk/cz/ls/js\n");
         printf("******************************************************************\n");
         printf("\n");
         printf("MENU:\n");
+        printf("1 - Basic Rechnungen\n");
+        printf("2 - 2D Formen berechnen\n");
+        printf("3 - 3D Formen berechnen\n");
         printf("\n");
 
         fflush(stdin);
-        printf(": ");
+        printf("Waehle weise: ");
         scanf("%100[^\n]", buffer);
         fflush(stdin);
         char *a = (char *) malloc(strlen(buffer) + 1);
         strcpy(a, buffer);
         printf("\n");
 
-        printf("Seite B:");
-        scanf("%100[^\n]", bufferb);
-        fflush(stdin);
-        char *b = (char *) malloc(strlen(bufferb) + 1);
-        strcpy(b, bufferb);
-        printf("\n");
-
-        printf("Seite C:");
-        scanf("%100[^\n]", bufferc);
-        fflush(stdin);
-        char *c = (char *) malloc(strlen(bufferc) + 1);
-        strcpy(c, bufferc);
-        printf("\n");
-
-        n = checker(a, b, c, n);
+        n = checker(a, n);
 
         switche(n);
 
@@ -70,112 +73,157 @@ int main() {
     return 0;
 }
 
-int checker(char *a, char *b, char *c, int n) {
+void print_image(FILE *fptr)
+{
+    char read_string[MAX_LEN];
+
+    while(fgets(read_string,sizeof(read_string),fptr) != NULL)
+        printf("%s",read_string);
+}
+
+int checker(char *a, int n) {
     lena = strlen(a);
-    lenb = strlen(b);
-    lenc = strlen(c);
+    char buffer[101];
+    int newchosen = 0;
+
 
     for (int i = 0; i < lena;) {
         if  (a[i] < 0){
             n = 1;
             return n;
-        } else if (!isdigit(a[i]))  {
+        } else if (!isdigit(a[i])) {
             n = 2;
-            return n;
-        } else if (a[i] == 0) {
-            n = 3; //Null als seitenlänge
-            return n;
-        }
-        ++i;
-    }
-    for (int i = 0; i < lenb;) {
-        if (b[i] < 0) {
-            n = 1;
-            return n;
-        } else if (!isdigit(b[i])) {
-            n = 2;
-            return n;
-        } else if (b[i] == 0) {
-            n = 3; //Null als seitenlänge
-            return n;
-        }
-        ++i;
-    }
-    for (int i = 0; i < lenc;) {
-        if  (c[i] < 0) {
-            n = 1;
-            return n;
-        } else if (!isdigit(c[i])){
-
-            n = 2;
-            return n;
-        } else if (c[i] == 0) {
-            n = 3; //Null als seitenlänge
             return n;
         }
         ++i;
     }
     //printf("%d", n);
-    if (n != 1 && n != 2 && n != 3) {
+    if (n != 1 && n != 2) {
         newa = (float) strtod(a, NULL);
-        newb = (float) strtod(b, NULL);
-        newc = (float) strtod(c, NULL);
+                if (newa == 1){
+                    printf("3D FORMEN: \n");
+                    printf("\t 1 - Summieren\n");
+                    printf("\t 2 - Subtrahieren\n");
+                    printf("\t 3 - Dividieren\n");
+                    printf("\t 4 - Multiplizieren\n");
+                    printf("\t 5 - Exponent\n");
+                    printf("\t 6 - Wurzel\n");
+                    printf("\t 7 - Fakultativ\n");
 
+                    fflush(stdin);
+                    printf("Waehle weise: ");
+                    scanf("%100[^\n]", buffer);
+                    fflush(stdin);
+                    char *b = (char *) malloc(strlen(buffer) + 1);
+                    strcpy(b, buffer);
+                    printf("\n");
+                    newchosen = (int) strtod(b, NULL);
+                    switch (newchosen) {
+                        case 1:
+                            n = 3;
+                            return n;
+                        case 2:
+                            n = 4;
+                            return n;
+                        case 3:
+                            n = 5;
+                            return n;
+                        case 4:
+                            n =6;
+                            return n;
+                        case 5:
+                            n=7;
+                            return n;
+                        case 6:
+                            n=8;
+                            return n;
+                        case 7:
+                            n=9;
+                            return n;
+                        default:
+                            n = 1;
+                            return n;
+                    }
+                }
+                else if (newa == 2){
+                    printf("3D FORMEN: \n");
+                    printf("\t 1 - Kreis\n");
+                    printf("\t 2 - Quadrat\n");
+                    printf("\t 3 - Rechteck\n");
+                    printf("\t 4 - Dreieck\n");
+                    printf("\t 5 - Trapez\n");
 
-        if (a > b && a > c) {
-            newa = (float) strtod(a, NULL);
-            if (b > c) {
-                newb = (float) strtod(b, NULL);
-                newc = (float) strtod(c, NULL);
-            } else {
-                newb = (float) strtod(c, NULL);
-                newc = (float) strtod(b, NULL);
-            }
-        } else if (b > a && b > c) {
-            newa = (float) strtod(b, NULL);
-            if (a > c) {
-                newb = (float) strtod(a, NULL);
-                newc = (float) strtod(c, NULL);
-            }
-        } else if (a > b) {
-            newa = (float) strtod(c, NULL);
-            newb = (float) strtod(a, NULL);
-            newc = (float) strtod(b, NULL);
+                    fflush(stdin);
+                    printf("Waehle weise: ");
+                    scanf("%100[^\n]", buffer);
+                    fflush(stdin);
+                    char *b = (char *) malloc(strlen(buffer) + 1);
+                    strcpy(b, buffer);
+                    printf("\n");
+                    newchosen = (int) strtod(b, NULL);
+                    switch (newchosen) {
+                        case 1:
+                            n = 10;
+                            return n;
+                        case 2:
+                            n = 11;
+                            return n;
+                        case 3:
+                            n = 12;
+                            return n;
+                        case 4:
+                            n =13;
+                            return n;
+                        case 5:
+                            n=14;
+                            return n;
+                        default:
+                            n = 1;
+                            return n;
+                    }
+                }
+                else if (newa == 3){
+                    printf("3D FORMEN: \n");
+                    printf("\t 1 - Kugel\n");
+                    printf("\t 2 - Wuerfel\n");
+                    printf("\t 3 - Quader\n");
+                    printf("\t 4 - Zylinder\n");
+                    printf("\t 5 - Kegel\n");
 
-        }
+                    fflush(stdin);
+                    printf("Waehle weise: ");
+                    scanf("%100[^\n]", buffer);
+                    fflush(stdin);
+                    char *b = (char *) malloc(strlen(buffer) + 1);
+                    strcpy(b, buffer);
+                    printf("\n");
+                    newchosen = (int) strtod(b, NULL);
 
+                    switch (newchosen) {
+                        case 1:
+                            n = 15;
+                            return n;
+                        case 2:
+                            n = 16;
+                            return n;
+                        case 3:
+                            n = 17;
+                            return n;
+                        case 4:
+                            n =18;
+                            return n;
+                        case 5:
+                            n=19;
+                            return n;
+                        default:
+                            n = 1;
+                            return n;
+                    }
 
-        if (newa == newb && newa == newc && newb == newc) {
-            n = 4; // gleichseitig
-            return n;
-
-        }
-
-
-        if (newa == newb || newa == newc || newb == newc) {
-            n = 5; //gleichschenklig
-            return n;
-
-        }
-        if ((newa * newa) == (newb * newb) + (newc * newc)) {
-            n = 9;
-            return n;
-        }
-
-        if ((newa + newb) < newc) {
-            n = 7;
-            return n;
-        }
-        float newd = newa + newb;
-        if (newd == newc) {
-            n = 8;
-            return n;
-
-        }
-        if (newa != newb && newa != newc && newb != newc) {
-            n = 6; //gewöhnliches Dreieck
-            return n;
-        }
+                }
+                else{
+                    printf("Ungueltige Eingabe");
+                }
     }
     return n;
 
@@ -184,66 +232,75 @@ int checker(char *a, char *b, char *c, int n) {
 void switche(int n) {
     switch (n) {
         case 1:
-            printf("---------------------------------\n");
-            printf("CODE: \t\t");
-            printf("FC96TF\n");
-            printf("---------------------------------\n");
+            printf("------------------------------------------------------\n");
+            printf("ERROR: \t\t");
+            printf("Diese Zahl ist nicht gueltig!\n");
+            printf("------------------------------------------------------\n");
             break;
 
         case 2:
-            printf("---------------------------------\n");
-            printf("CODE: \t\t");
-            printf("FC12TF\n");
-            printf("---------------------------------\n");
+            printf("------------------------------------------------------\n");
+            printf("ERROR: \t\t");
+            printf("Deine Eingabe ist keine Zahl!\n");
+            printf("------------------------------------------------------\n");
             break;
 
         case 3:
-            printf("---------------------------------\n");
-            printf("CODE: \t\t");
-            printf("FC16TF\n");
-            printf("---------------------------------\n");
+            //Summieren
             break;
 
         case 4:
-            printf("---------------------------------\n");
-            printf("CODE: \t\t");
-            printf("FC66TF\n");
-            printf("---------------------------------\n");
+            //subtrahieren
             break;
 
         case 5:
-            printf("---------------------------------\n");
-            printf("CODE: \t\t");
-            printf("FC84TF\n");
-            printf("---------------------------------\n");
+            //Dividieren
             break;
 
         case 6:
-            printf("---------------------------------\n");
-            printf("CODE: \t\t");
-            printf("FC60TF\n");
-            printf("---------------------------------\n");
+            //Multiplizieren
             break;
 
         case 7:
-            printf("---------------------------------\n");
-            printf("CODE: \t\t");
-            printf("FC36TF\n");
-            printf("---------------------------------\n");
+            //Exponent
             break;
 
         case 8:
-            printf("---------------------------------\n");
-            printf("CODE: \t\t");
-            printf("FC56TF\n");
-            printf("---------------------------------\n");
+            //Wurzel
             break;
 
         case 9:
-            printf("---------------------------------\n");
-            printf("CODE: \t\t");
-            printf("FC72TF\n");
-            printf("---------------------------------\n");
+            //Fakultativ
+            break;
+        case 10:
+            //Fakultativ
+            break;
+        case 11:
+            //Fakultativ
+            break;
+        case 12:
+            //Fakultativ
+            break;
+        case 13:
+            //Fakultativ
+            break;
+        case 14:
+            //Fakultativ
+            break;
+        case 15:
+            //Fakultativ
+            break;
+        case 16:
+            //Fakultativ
+            break;
+        case 17:
+            //Fakultativ
+            break;
+        case 18:
+            //Fakultativ
+            break;
+        case 19:
+            //Fakultativ
             break;
 
     }
