@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 double sum() {
     
     double a = 0.00;
@@ -92,22 +93,15 @@ double wurz() {
     
     double a = 0.00;
     double b = 0.00;
-    double c = 0.00;
-    double x = 0.00;
+    double x = 1.00;
     
     scanf("%lf", &a);
-    scanf("%lf", &b);
     
-    if(b == 0){
-        printf("Error, can't get root 0!");
-    }else {
-        
-        c = 1/b; 
-        x = a;
-        
-        for(b; b > 1; b--){
-            x = a*x;
-        }
+    while (1)
+    {
+        b = b + 1;
+        x = (a / x + x) / 2;
+        if (b == a + 1) { break; }
     }
     
     return x;

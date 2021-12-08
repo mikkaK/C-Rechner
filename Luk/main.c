@@ -23,9 +23,9 @@ int main(int argc, char** argv) {
     double result = 0.00;
     
     
-    result = expo();
+    result = wurz();
     
-    printf("%fl", result);
+    printf("%lf\n", result);
     
     
     
