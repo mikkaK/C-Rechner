@@ -29,17 +29,17 @@ int main() {
 
 
         printf("******************************************************************\n");
-        printf("\t\t NYP - PRAKTIKUM INFORMATIK - \n");
+        printf("\t\t Taschenrechner - \n");
         printf("******************************************************************\n");
         printf("NYP, 2021\n");
-        printf("mk\n");
+        printf("mk/cz/ls/js\n");
         printf("******************************************************************\n");
         printf("\n");
-        printf("TESTFAELLE DREIECK\n");
+        printf("MENU:\n");
         printf("\n");
 
         fflush(stdin);
-        printf("Seite A: ");
+        printf(": ");
         scanf("%100[^\n]", buffer);
         fflush(stdin);
         char *a = (char *) malloc(strlen(buffer) + 1);
