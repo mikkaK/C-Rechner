@@ -4,6 +4,10 @@
 
 #ifndef C_RECHNER_2D_H
 #define C_RECHNER_2D_H
-
+circle();
+square();
+rectangle();
+triangle();
+potenz();
 
 #endif //C_RECHNER_2D_H
