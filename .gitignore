@@ -54,6 +54,5 @@ dkms.conf
 CMakeCache.txt
 
 cmake-build-debug/.ninja_deps
-cmake-build-debug/.ninja_deps
 cmake-build-debug/.ninja_log
 cmake-build-debug/Testing/Temporary/LastTest.log
