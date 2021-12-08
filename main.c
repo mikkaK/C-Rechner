@@ -7,8 +7,6 @@
 
 #define MAX_LEN 128
 
-
-
 int lena = 0;
 int lenb = 0;
 int lenc = 0;
