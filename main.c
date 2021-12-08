@@ -2,7 +2,7 @@
 #include <malloc.h>
 #include <string.h>
 #include <ctype.h>
-#include <time.h>
+
 
 
 int lena = 0;
@@ -12,13 +12,11 @@ float newa;
 float newb;
 float newc;
 
-
 int checker(char *a, char *b, char *c, int n);
 
 void switche(int n);
 
 int cont();
-
 
 int main() {
     int n;
