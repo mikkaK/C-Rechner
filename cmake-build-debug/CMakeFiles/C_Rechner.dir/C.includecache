@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/cedzo/C-Rechner/2D.h
+
+C:/Users/cedzo/C-Rechner/3D.h
+
 C:/Users/cedzo/C-Rechner/main.c
 stdio.h
 -
@@ -15,4 +19,8 @@ string.h
 -
 ctype.h
 -
+2D.h
+C:/Users/cedzo/C-Rechner/2D.h
+3D.h
+C:/Users/cedzo/C-Rechner/3D.h
 

@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/cedzo/C-Rechner/2D.c">
+			<Option target="C_Rechner"/>
+		</Unit>
+		<Unit filename="C:/Users/cedzo/C-Rechner/2D.h">
+			<Option target="C_Rechner"/>
+		</Unit>
 		<Unit filename="C:/Users/cedzo/C-Rechner/3D.c">
 			<Option target="C_Rechner"/>
 		</Unit>

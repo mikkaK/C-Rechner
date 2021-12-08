@@ -2,6 +2,9 @@
 #include <malloc.h>
 #include <string.h>
 #include <ctype.h>
+#include "2D.h"
+#include "3D.h"
+
 #define MAX_LEN 128
 
 
@@ -159,17 +162,13 @@ int checker(char *a, int n) {
                     newchosen = (int) strtod(b, NULL);
                     switch (newchosen) {
                         case 1:
-                            n = 10;
-                            return n;
-                        case 2:
-                            n = 11;
-                            return n;
+                            circle();
+                        case 2: square();
+
                         case 3:
-                            n = 12;
-                            return n;
+                            rectangle();
                         case 4:
-                            n =13;
-                            return n;
+                           triangle();
                         case 5:
                             n=14;
                             return n;

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/C_Rechner.dir/2D.c.obj"
   "CMakeFiles/C_Rechner.dir/3D.c.obj"
   "CMakeFiles/C_Rechner.dir/main.c.obj"
   "C_Rechner.exe"
