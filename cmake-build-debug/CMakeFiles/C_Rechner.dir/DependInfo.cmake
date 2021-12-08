@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/cedzo/C-Rechner/2D.c" "C:/Users/cedzo/C-Rechner/cmake-build-debug/CMakeFiles/C_Rechner.dir/2D.c.obj"
   "C:/Users/cedzo/C-Rechner/3D.c" "C:/Users/cedzo/C-Rechner/cmake-build-debug/CMakeFiles/C_Rechner.dir/3D.c.obj"
   "C:/Users/cedzo/C-Rechner/main.c" "C:/Users/cedzo/C-Rechner/cmake-build-debug/CMakeFiles/C_Rechner.dir/main.c.obj"
   )

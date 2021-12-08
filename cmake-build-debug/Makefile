@@ -128,6 +128,30 @@ C_Rechner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\C_Rechner.dir\build.make CMakeFiles/C_Rechner.dir/build
 .PHONY : C_Rechner/fast
 
+2D.obj: 2D.c.obj
+.PHONY : 2D.obj
+
+# target to build an object file
+2D.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C_Rechner.dir\build.make CMakeFiles/C_Rechner.dir/2D.c.obj
+.PHONY : 2D.c.obj
+
+2D.i: 2D.c.i
+.PHONY : 2D.i
+
+# target to preprocess a source file
+2D.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C_Rechner.dir\build.make CMakeFiles/C_Rechner.dir/2D.c.i
+.PHONY : 2D.c.i
+
+2D.s: 2D.c.s
+.PHONY : 2D.s
+
+# target to generate assembly for a file
+2D.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C_Rechner.dir\build.make CMakeFiles/C_Rechner.dir/2D.c.s
+.PHONY : 2D.c.s
+
 3D.obj: 3D.c.obj
 .PHONY : 3D.obj
 
@@ -185,6 +209,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... C_Rechner
+	@echo ... 2D.obj
+	@echo ... 2D.i
+	@echo ... 2D.s
 	@echo ... 3D.obj
 	@echo ... 3D.i
 	@echo ... 3D.s
