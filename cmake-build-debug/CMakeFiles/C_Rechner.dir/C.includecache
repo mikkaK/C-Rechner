@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/cedzo/C-Rechner/3D.c
-malloc.h
--
-string.h
--
-ctype.h
--
-3D.h
-C:/Users/cedzo/C-Rechner/3D.h
-stdio.h
--
-
-C:/Users/cedzo/C-Rechner/3D.h
-
 C:/Users/cedzo/C-Rechner/main.c
 stdio.h
 -

@@ -329,6 +329,7 @@ int cont() {
         } else {
             no = 0;
         }
+        system("cls");
     } while (no != 0);
     return weiter;
 }
