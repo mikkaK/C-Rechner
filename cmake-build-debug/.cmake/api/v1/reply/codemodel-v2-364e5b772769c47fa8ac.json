@@ -6,6 +6,7 @@
 			[
 				{
 					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20.2"
@@ -48,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/cedzo/C-Rechner/cmake-build-debug",
-		"source" : "C:/Users/cedzo/C-Rechner"
+		"build" : "C:/Users/kumme/Desktop/Noser/C-Rechner/C-Rechner/cmake-build-debug",
+		"source" : "C:/Users/kumme/Desktop/Noser/C-Rechner/C-Rechner"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 2
+		"minor" : 3
 	}
 }
