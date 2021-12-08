@@ -29,17 +29,15 @@ int main() {
     int weiter = 0;
     while (weiter == 0) {
 
+        //welcome message
         char *filename = "image.txt";
         FILE *fptr = NULL;
-
         if((fptr = fopen(filename,"r")) == NULL)
         {
             fprintf(stderr,"error opening %s\n",filename);
             return 1;
         }
-
         print_image(fptr);
-
         fclose(fptr);
 
         printf("NYP, 2021\n");
@@ -51,6 +49,7 @@ int main() {
         printf("3 - 3D Formen berechnen\n");
         printf("\n");
 
+        //input
         fflush(stdin);
         printf("Waehle weise: ");
         scanf("%100[^\n]", buffer);
@@ -80,7 +79,7 @@ void print_image(FILE *fptr)
 int checker(char *a, int n) {
     lena = strlen(a);
     char buffer[101];
-    int newchosen = 0;
+    int newchosen;
 
 
     for (int i = 0; i < lena;) {
@@ -97,7 +96,7 @@ int checker(char *a, int n) {
     if (n != 1 && n != 2) {
         newa = (float) strtod(a, NULL);
                 if (newa == 1){
-                    printf("3D FORMEN: \n");
+                    printf("Basic Rechnungen: \n");
                     printf("\t 1 - Summieren\n");
                     printf("\t 2 - Subtrahieren\n");
                     printf("\t 3 - Dividieren\n");
@@ -105,6 +104,7 @@ int checker(char *a, int n) {
                     printf("\t 5 - Exponent\n");
                     printf("\t 6 - Wurzel\n");
                     printf("\t 7 - Fakultativ\n");
+
 
                     fflush(stdin);
                     printf("Waehle weise: ");
@@ -142,7 +142,7 @@ int checker(char *a, int n) {
                     }
                 }
                 else if (newa == 2){
-                    printf("3D FORMEN: \n");
+                    printf("2D FORMEN: \n");
                     printf("\t 1 - Kreis\n");
                     printf("\t 2 - Quadrat\n");
                     printf("\t 3 - Rechteck\n");
@@ -251,6 +251,7 @@ void switche(int n) {
 
         case 5:
             //Dividieren
+
             break;
 
         case 6:
