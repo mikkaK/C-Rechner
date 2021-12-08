@@ -27,10 +27,7 @@ int main() {
     char bufferc[101];
     int weiter = 0;
     while (weiter == 0) {
-        n = 0;
-        time_t mytime = time(NULL);
-        char * time_str = ctime(&mytime);
-        time_str[strlen(time_str)-1] = '\0';
+
 
 
         printf("******************************************************************\n");
@@ -68,10 +65,6 @@ int main() {
         n = checker(a, b, c, n);
 
         switche(n);
-
-        FILE *out=fopen("log.txt","w");
-        fprintf(out, "Zeit: %s \n Seite A: %s - Seite B: %s - Seite C: %s", time_str, a ,b, c);
-        fclose(out);
 
         weiter = cont();
 
