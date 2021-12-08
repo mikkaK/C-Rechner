@@ -42,14 +42,10 @@ int main() {
 
         fclose(fptr);
 
-        printf("******************************************************************\n");
-        printf("\t\t Taschenrechner \n");
-        printf("******************************************************************\n");
         printf("NYP, 2021\n");
         printf("mk/cz/ls/js\n");
-        printf("******************************************************************\n");
         printf("\n");
-        printf("MENU:\n");
+        printf("\tMENU: \n");
         printf("1 - Basic Rechnungen\n");
         printf("2 - 2D Formen berechnen\n");
         printf("3 - 3D Formen berechnen\n");
