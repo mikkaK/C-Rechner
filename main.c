@@ -331,5 +331,5 @@ int cont() {
         }
         system("cls");
     } while (no != 0);
-    return weiter;
+    return weiter;//loop
 }
