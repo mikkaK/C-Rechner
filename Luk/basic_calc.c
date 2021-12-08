@@ -13,8 +13,13 @@ double sum() {
     double b = 0.00;
     double x = 0.00;
     
+    printf("Geben Sie den ersten Summanden ein:\n");
     scanf("%lf", &a);
+    system("cls");
+    
+    printf("Geben Sie den zweiten Summanden ein:\n");
     scanf("%lf", &b);
+    system("cls");
     
     x = a+b;
     
@@ -27,8 +32,14 @@ double sub() {
     double b = 0.00;
     double x = 0.00;
     
+    
+    printf("Geben Sie den Minuenden ein:\n");
     scanf("%lf", &a);
+    system("cls");
+    
+    printf("Geben Sie den Subtrahenden ein:\n");
     scanf("%lf", &b);
+    system("cls");
     
     x = a-b;
     
@@ -41,11 +52,16 @@ double divi() {
     double b = 0.00;
     double x = 0.00;
     
+    printf("Geben Sie den Dividended ein:\n");
     scanf("%lf", &a);
+    system("cls");
+    
+    printf("Geben Sie den Divisor ein:\n");
     scanf("%lf", &b);
+    system("cls");
     
     if(b == 0){
-        printf("Error, cant divide by 0!");
+        printf("Fehler, die Zahl kann nicht durch 0 geteilt werden!");
     }else {
         x = a/b;
     }
@@ -59,8 +75,13 @@ double mult() {
     double b = 0.00;
     double x = 0.00;
     
+    printf("Geben Sie den Multiplikator ein:\n");
     scanf("%lf", &a);
+    system("cls");
+    
+    printf("Geben Sie den Multiplikanden ein:\n");
     scanf("%lf", &b);
+    system("cls");
     
     x = a*b;
     
@@ -73,8 +94,13 @@ double expo() {
     double b = 0.00;
     double x = 0.00;
     
+    printf("Geben Sie die Basis ein:\n");
     scanf("%lf", &a);
+    system("cls");
+    
+    printf("Geben Sie den Exponenten ein:\n");
     scanf("%lf", &b);
+    system("cls");
     
     x = a;
     
@@ -95,7 +121,9 @@ double wurz() {
     double b = 0.00;
     double x = 1.00;
     
+    printf("Geben Sie den Radikanden ein:\n");
     scanf("%lf", &a);
+    system("cls");
     
     while (1)
     {
@@ -112,7 +140,9 @@ double fak() {
     double a = 0.00;
     double x = 1.00;
     
+    printf("Geben Sie den Fakultätsert ein:\n");
     scanf("%lf", &a);
+    system("cls");
     
     for(a; a > 0; a--){
         x=a*x;
@@ -120,4 +150,3 @@ double fak() {
     
     return x;
 }
-
