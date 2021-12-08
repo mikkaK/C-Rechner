@@ -9,5 +9,4 @@ square();
 rectangle();
 triangle();
 
-
 #endif //C_RECHNER_2D_H
