@@ -8,6 +8,6 @@ circle();
 square();
 rectangle();
 triangle();
-potenz();
+
 
 #endif //C_RECHNER_2D_H

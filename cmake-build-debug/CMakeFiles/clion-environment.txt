@@ -1,4 +1,4 @@
 ToolSet: 5.4 (local)@C:\MyTools\MinGW
 Options: 
 
-Options:-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.2.1/bin/ninja/win/ninja.exe
+Options:
