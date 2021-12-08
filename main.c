@@ -95,7 +95,7 @@ int checker(char *a, int n) {
         }
         ++i;
     }
-    //printf("%d", n);
+
     if (n != 1 && n != 2) {
         newa = (float) strtod(a, NULL);
                 if (newa == 1){

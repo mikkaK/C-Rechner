@@ -122,11 +122,11 @@ double trapez() {
 }
 
 int main() {
-    //kugel();
-    //wurfel();
-    //quader();
-    //zylinder();
-    //kegel();
+    kugel();
+    wurfel();
+    quader();
+    zylinder();
+    kegel();
     trapez();
     return 0;
 }
