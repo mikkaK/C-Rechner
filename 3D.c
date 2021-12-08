@@ -102,7 +102,7 @@ double kegel() {
 }
 
 
-int main() {
+int ausfueren() {
     kugel();
     wurfel();
     quader();
