@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
     double result = 0.00;
     
     
-    result = wurz();
+    result = sum();
     
     printf("%lf\n", result);
     
