@@ -218,7 +218,7 @@ int checker(char *a, int n) {
 
                 }
                 else{
-                    printf("Ungueltige Eingabe");
+                    printf("Ungueltige Eingabe\n");
                 }
     }
     return n;
