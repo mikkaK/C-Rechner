@@ -90,7 +90,7 @@ double sub() {
             error1();
         }
         
-        x = a - x;
+        x = x - a;
         
         b = loop();
     }
