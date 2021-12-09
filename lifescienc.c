@@ -8,6 +8,7 @@
 double bmi() {
     double grosse;
     double gewicht;
+    inputbmi:
     printf("Gib deine aktuelle Groesse in m an: \n");
     while (scanf("%lf%*[0-9]", &grosse) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
@@ -18,8 +19,13 @@ double bmi() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    double bmi = (gewicht / (grosse * grosse));
-    printf("Dein BMI ist: %lf\n", bmi);
+    if(grosse > 0 && gewicht > 0) {
+        double bmi = (gewicht / (grosse * grosse));
+        printf("Dein BMI ist: %lf\n", bmi);
+    }else{
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        goto inputbmi;
+    }
 
     return 0;
 }
@@ -29,6 +35,7 @@ double alk() {
     double gewicht;
     double faktor;
     char r;
+
     gesch: printf("Geben sie ihr Geschlecht an: F / M \n");
     scanf("%c", &r);
     if(r == 'f' || 'F'){
@@ -39,6 +46,7 @@ double alk() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto gesch;
     }
+    inputalk:
     printf("Gib deinen aktuellen Alkoholwert an (in Gramm): \n");
     while (scanf("%lf%*[0-9]", &alkInGramm) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
@@ -49,9 +57,13 @@ double alk() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    double bmi = (alkInGramm/ (gewicht * faktor));
-    printf("Dein Alkoholgehalt ist: %lf Promille\n", bmi);
-
+    if(alkInGramm > 0 && gewicht > 0) {
+        double bmi = (alkInGramm / (gewicht * faktor));
+        printf("Dein Alkoholgehalt ist: %lf Promille\n", bmi);
+    }else{
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        goto inputalk;
+    }
     return 0;
 }
 
@@ -80,6 +92,7 @@ double kalorien() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto gesch;
     }
+    inputkalorien:
     printf("Gib dein aktuelles Alter an : \n");
     while (scanf("%lf%*[0-9]", &alter) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
@@ -95,9 +108,13 @@ double kalorien() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    double kalorienBedarf = (faktor +(faktor2 * gewicht)+(faktor3 * grosse)-(faktor4 * alter ));
-    printf("Dein taeglicher Kalorienbedarf ist: %lf Kalorien\n", kalorienBedarf);
-
+    if(alter > 0 && grosse > 0 && gewicht > 0) {
+        double kalorienBedarf = (faktor + (faktor2 * gewicht) + (faktor3 * grosse) - (faktor4 * alter));
+        printf("Dein taeglicher Kalorienbedarf ist: %lf Kalorien\n", kalorienBedarf);
+    }else{
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        goto inputkalorien;
+    }
     return 0;
 }
 
