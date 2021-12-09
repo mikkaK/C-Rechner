@@ -27,7 +27,7 @@ int main() {
     char buffer[101];
 
     int weiter = 0;
-    while (weiter == 0) {
+    while (0 == weiter) {
 
         //welcome message
         char *filename = "image.txt";
@@ -99,9 +99,9 @@ int checker(char *a, int n) {
         ++i;
     }
 
-    if (n != 1 && n != 2) {
+    if (1 != n && 2 != n) {
         newa = (float) strtod(a, NULL);
-        if (newa == 1) {
+        if ( 1 == newa) {
             printf("\n");
             printf("Basic Rechnungen: \n");
             printf(" \t ----------------------- \n");
@@ -150,7 +150,7 @@ int checker(char *a, int n) {
                     n = 1;
                     return n;
             }
-        } else if (newa == 2) {
+        } else if (2 == newa) {
             printf("\n");
             printf("2D FORMEN: \n");
             printf("\t --------------- \n");
@@ -189,7 +189,7 @@ int checker(char *a, int n) {
                     n = 1;
                     return n;
             }
-        } else if (newa == 3) {
+        } else if (3 == newa) {
             printf("\n");
             printf("3D FORMEN: \n");
             printf("\t ---------------\n");
@@ -230,7 +230,7 @@ int checker(char *a, int n) {
                     return n;
             }
 
-        } else if (newa == 4) {
+        } else if (4 == newa) {
             printf("\n");
             printf("Life Science: \n");
             printf(" \t ------------------------------- \n");
@@ -420,17 +420,17 @@ int cont() {
 
         no = 0;
         weiter = strcmp(y, str2);
-        if (strcmp(y, str2) != 0) {
-            if (strcmp(y, str1) != 0) {
+        if ( 0 != strcmp(y, str2)) {
+            if ( 0 != strcmp(y, str1)) {
                 printf("ERROR: ung\x81ltige Eingabe\n");
                 no = 1;
             }
-        } else if (strcmp(y, str1) == 0) {
+        } else if ( 0 == strcmp(y, str1)) {
             exit(0);
         } else {
             no = 0;
         }
         system("cls");
-    } while (no != 0);
+    } while ( 0 != no);
     return weiter;//loop
 }
