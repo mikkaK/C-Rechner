@@ -75,7 +75,8 @@ double divi() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-
+    
+    printf("Geben Sie den Divisor ein:\n");
     while (scanf("%lf%*[0-9]",  &b) != 1){
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
