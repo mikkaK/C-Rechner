@@ -42,6 +42,8 @@ int main() {
         print_image(fptr);
         fclose(fptr);
 
+        n=0;
+
         printf("*************\n");
         printf(" NYP, 2021\n");
         printf(" mk/cz/ls/js\n");
