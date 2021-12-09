@@ -5,19 +5,22 @@
 #include "2D.h"
 #include "flush.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 #define pi 3.1415926 //Pi vordefinieren
 
 double circle() { //Kreisflächenberechnungsfunktion
+    char diameter;
+    char *ptr;
     double cDiameter;
     double cRadius;
     double cArea;
     dCheck:
     printf("Gib den Durchmesser deines Kreises an: \n");
-    while (scanf("%lf%*[0-9]", &cDiameter) != 1) { //Benutzereingabe
+    while (scanf("%s%*[0-9]", &diameter) != 1) { //Benutzereingabe
         error1(); //Falls die Einageb nicht nummerisch war, wird der Benutzer wieder gefragt
     }
 
+    cDiameter = strtod(&diameter, &ptr);
     if (cDiameter < 0) { //Fals der Wert nicht grösser über 0 ist
         error2(); //Flush
         goto dCheck; //Wieder zur Benutzereingabe Fals der Wert unter 0 war
@@ -30,13 +33,17 @@ double circle() { //Kreisflächenberechnungsfunktion
 }
 
 double square() { //Quadratflächenberechnung
+    char *ptr;
+    char sSq;
+    char aSq;
     double sSquare;
     double aSquare;
     squareCheck:
     printf("Gib die Seitenl\x84nge deines Quadrates an: \n");
-    while (scanf("%lf%*[0-9]", &sSquare) != 1) { //Benutzereingabe
+    while (scanf("%s%*[0-9]", &sSq) != 1) { //Benutzereingabe
         error1();//Falls die Einageb nicht nummerisch war, wird der Benutzer wieder gefragt
     }
+    sSquare = strtod(&sSq, &ptr);
 
     if (sSquare < 0) { //Fals der Wert nicht grösser über 0 ist
         error2();//Flush

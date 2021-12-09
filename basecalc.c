@@ -3,6 +3,7 @@
 //
 
 #include "basecalc.h"
+#include "flush.h"
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,14 +22,12 @@ double sum() {
 
     printf("Geben Sie den ersten Summanden ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     printf("Geben Sie den zweiten Summanden ein:\n");
     while (1 != scanf("%lf%*[0-9]", &b)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     x = a + b;
@@ -47,14 +46,12 @@ double sub() {
 
     printf("Geben Sie den Minuenden ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     printf("Geben Sie den Subtrahenden ein:\n");
     while (1 != scanf("%lf%*[0-9]", &b)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     x = a - b;
@@ -72,14 +69,12 @@ double divi() {
 
     printf("Geben Sie den Dividended ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     printf("Geben Sie den Divisor ein:\n");
     while (1 != scanf("%lf%*[0-9]", &b)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     if (0 == b) {
@@ -101,14 +96,12 @@ double mult() {
 
     printf("Geben Sie den Multiplikator ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     printf("Geben Sie den Multiplikanden ein:\n");
     while (1 != scanf("%lf%*[0-9]", &b)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     x = a * b;
@@ -126,14 +119,12 @@ double expo() {
 
     printf("Geben Sie die Basis ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     printf("Geben Sie den Exponenten ein:\n");
     while (1 != scanf("%lf%*[0-9]", &b)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     x = a;
@@ -160,8 +151,7 @@ double wurz() {
 
     printf("Geben Sie den Radikanden ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n' != !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     if (a < 0) {
@@ -197,8 +187,7 @@ double fak() {
 
     printf("Geben Sie den Fakultätswert ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
-        printf("Falsche Eingabe! Versuche es erneut:\n");
-        while ('\n'!= !feof(stdin) && fgetc(stdin));
+        error1();
     }
 
     for (a; a > 0; a--) {
