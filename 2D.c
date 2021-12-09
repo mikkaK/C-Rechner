@@ -48,7 +48,7 @@ double rectangle(){
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
     double aRectangle = sRectangleA * sRectangleB;
-    printf("Die Flaeche deines Rechtecks betraegt: %lf\n", aRectangle);
+    printf("Die Fl\x84che deines Rechtecks betr\x84gt: %lf\n", aRectangle);
     return 0;
 }
 

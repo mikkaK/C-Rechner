@@ -11,7 +11,7 @@ double kugel() {
     double kugelDurchmesser;
     inputsphere:
     printf("Gib den Durchmesser deines Kugel an: \n");
-    while (scanf("%lf%*[0-9]", &kugelDurchmesser) != 1) {
+    while (scanf("%lf%*[0-9]%*[^-]", &kugelDurchmesser) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
