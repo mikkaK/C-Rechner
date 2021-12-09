@@ -20,7 +20,7 @@ double sphere() {
     if (sphered > 0) {
         sphereRadius = sphered / 2;
         sphere = 4.0 / 3.0 * pi * ((sphereRadius * sphereRadius) * sphereRadius);
-        printf("Das Volumen deiner Kugel ist: %lf\n", sphere);
+        printf("Das Volumen deiner Kugel ist: %2.lf\n", sphere);
     } else {
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputsphere;
@@ -68,7 +68,7 @@ double cuboid() {
     }
     if (sitelenght1 > 0 && sitelenght2 > 0 && sitelenght3 > 0) {
         cuboid = ((sitelenght1 * sitelenght2) * sitelenght3);
-        printf("Das Volumen deines Quaders ist: %lf\n", cuboid);
+        printf("Das Volumen deines Quaders ist: %2.lf\n", cuboid);
     } else {
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputcuboid;
@@ -92,7 +92,7 @@ double cylinder() {
     }
     if (cylinderh > 0 && cylinderd > 0) {
         cylinder = (cylinderd / 2 * pi) * cylinderh;
-        printf("Das Volumen deines Zylinders ist: %lf\n", cylinder);
+        printf("Das Volumen deines Zylinders ist: %2.lf\n", cylinder);
     } else {
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputcylinder;
@@ -115,7 +115,7 @@ double cone() {
     }
     if (coned > 0 && coneh > 0) {
         cone = (coned / 2 * pi) * (1.0 / 3.0) * coneh;
-        printf("Das Volumen deines Kegels ist: %lf\n", cone);
+        printf("Das Volumen deines Kegels ist: %2.lf\n", cone);
     } else {
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputcone;
