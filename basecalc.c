@@ -19,18 +19,30 @@ double sum() {
     double a = 0;
     double b = 0;
     double x = 0;
+    char c;
 
     printf("Geben Sie den ersten Summanden ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
         error1();
     }
 
-    printf("Geben Sie den zweiten Summanden ein:\n");
-    while (1 != scanf("%lf%*[0-9]", &b)) {
-        error1();
+    while(1 != b){
+        
+        printf("Geben Sie den nächsten Summanden ein:\n");
+        while (1 != scanf("%lf%*[0-9]", &b)) {
+            error1();
+        }
+        
+        printf("Mächten Sie eine weitere Zahl hinzufügen: <Y>=JA <N>=NEIN");
+        scanf("%c", &c);
+        
+        switch(c.toUpperCase()){
+            case Y:
+        }
+        
+        
+        x = a + x;
     }
-
-    x = a + b;
 
     printf("Das Ergebnis lautet: %lf\n", x);
 
