@@ -35,6 +35,8 @@ double sum() {
 
     x = a+b;
 
+    printf("Das Ergebnis lautet: %fl\n", x);
+    
     return x;
 }
 
