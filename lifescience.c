@@ -3,21 +3,22 @@
 #include <stdio.h>
 
 double bmi() {
-    double grosse;
-    double gewicht;
+    double hight;
+    double weight;
+    double bmi;
     inputbmi:
     printf("Gib deine aktuelle Gr\x94sse in m an: \n");
-    while ( 1 !=scanf("%lf%*[0-9]", &grosse)) {
+    while ( 1 !=scanf("%lf%*[0-9]", &hight)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
     printf("Gib dein aktuelles Gewicht an (in Kg): \n");
-    while ( 1 !=scanf("%lf%*[0-9]", &gewicht)) {
+    while ( 1 !=scanf("%lf%*[0-9]", &weight)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    if(grosse > 0 && gewicht > 0) {
-        double bmi = (gewicht / (grosse * grosse));
+    if(hight > 0 && weight > 0) {
+        bmi = (weight / (hight * hight));
         printf("Dein BMI ist: %lf\n", bmi);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
