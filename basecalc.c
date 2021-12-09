@@ -20,21 +20,21 @@ double sum() {
     double x = 0;
 
     printf("Geben Sie den ersten Summanden ein:\n");
-    while (scanf("%lf%*[0-9]",  &a) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &a) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
     printf("Geben Sie den zweiten Summanden ein:\n");
-    while (scanf("%lf%*[0-9]",  &b) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &b) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
-    x = a+b;
+    x = a + b;
 
     printf("Das Ergebnis lautet: %lf\n", x);
-    
+
     return x;
 }
 
@@ -46,21 +46,21 @@ double sub() {
 
 
     printf("Geben Sie den Minuenden ein:\n");
-    while (scanf("%lf%*[0-9]",  &a) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &a) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
     printf("Geben Sie den Subtrahenden ein:\n");
-    while (scanf("%lf%*[0-9]",  &b) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &b) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
-    x = a-b;
-    
+    x = a - b;
+
     printf("Das Ergebnis lautet: %lf\n", x);
-    
+
     return x;
 }
 
@@ -71,25 +71,25 @@ double divi() {
     double x = 0.00;
 
     printf("Geben Sie den Dividended ein:\n");
-    while (scanf("%lf%*[0-9]",  &a) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
-        while (!feof(stdin) && fgetc(stdin) != '\n');
-    }
-    
-    printf("Geben Sie den Divisor ein:\n");
-    while (scanf("%lf%*[0-9]",  &b) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &a) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
-    if(b == 0){
-        printf("Fehler, die Zahl kann nicht durch 0 geteilt werden!");
-    }else {
-        x = a/b;
+    printf("Geben Sie den Divisor ein:\n");
+    while (scanf("%lf%*[0-9]", &b) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
+        while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    
-    printf("Das Ergebnis lautet: %lf\n", x);
-    
+
+    if (b == 0) {
+        printf("Fehler, die Zahl kann nicht durch 0 geteilt werden!");
+    } else {
+        x = a / b;
+
+        printf("Das Ergebnis lautet: %lf\n", x);
+    }
+
     return x;
 }
 
@@ -100,19 +100,19 @@ double mult() {
     double x = 0.00;
 
     printf("Geben Sie den Multiplikator ein:\n");
-    while (scanf("%lf%*[0-9]",  &a) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &a) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
     printf("Geben Sie den Multiplikanden ein:\n");
-    while (scanf("%lf%*[0-9]",  &b) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &b) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
-    x = a*b;
-    
+    x = a * b;
+
     printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
@@ -125,27 +125,27 @@ double expo() {
     double x = 0.00;
 
     printf("Geben Sie die Basis ein:\n");
-    while (scanf("%lf%*[0-9]",  &a) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &a) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
     printf("Geben Sie den Exponenten ein:\n");
-    while (scanf("%lf%*[0-9]",  &b) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &b) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
     x = a;
 
-    if(b == 0){
+    if (b == 0) {
         x = 1;
-    }else {
-        for(b; b > 1; b--){
-            x = a*x;
+    } else {
+        for (b; b > 1; b--) {
+            x = a * x;
         }
     }
-    
+
     printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
@@ -159,36 +159,34 @@ double wurz() {
     double x = 1.00;
 
     printf("Geben Sie den Radikanden ein:\n");
-    while (scanf("%lf%*[0-9]",  &a) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &a) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    
-    if(a < 0){
-        
-        c = 2*a;
-        a = a-c;
-        
-        while (1)
-        {
+
+    if (a < 0) {
+
+        c = 2 * a;
+        a = a - c;
+
+        while (1) {
             b = b + 1;
             x = (a / x + x) / 2;
             if (b == a + 1) { break; }
         }
-        
+
         printf("Das Ergebnis lautet: %lfi\n", x);
-        
+
     } else {
-    
-        while (1)
-        {
+
+        while (1) {
             b = b + 1;
             x = (a / x + x) / 2;
             if (b == a + 1) { break; }
         }
         printf("Das Ergebnis lautet: %lf\n", x);
     }
-    
+
     return x;
 }
 
@@ -198,15 +196,15 @@ double fak() {
     double x = 1.00;
 
     printf("Geben Sie den Fakultätswert ein:\n");
-    while (scanf("%lf%*[0-9]",  &a) != 1){
-        printf("Falsche Eingabe! Versuche es erneut\n");
+    while (scanf("%lf%*[0-9]", &a) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut:\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
-    for(a; a > 0; a--){
-        x=a*x;
+    for (a; a > 0; a--) {
+        x = a * x;
     }
-    
+
     printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;

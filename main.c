@@ -9,12 +9,9 @@
 
 #define MAX_LEN 128
 
-int lena = 0;
-int lenb = 0;
-int lenc = 0;
+unsigned int lena = 0;
+
 float newa;
-float newb;
-float newc;
 
 void print_image(FILE *fptr);
 
@@ -27,23 +24,21 @@ int cont();
 int main() {
     int n;
     char buffer[101];
-    char bufferb[101];
-    char bufferc[101];
+
     int weiter = 0;
-    while (weiter == 0) {
+    while (0 == weiter) {
 
         //welcome message
         char *filename = "image.txt";
         FILE *fptr = NULL;
-        if((fptr = fopen(filename,"r")) == NULL)
-        {
-            fprintf(stderr,"error opening %s\n",filename);
+        if ((fptr = fopen(filename, "r")) == NULL) {
+            fprintf(stderr, "error opening %s\n", filename);
             return 1;
         }
         print_image(fptr);
         fclose(fptr);
 
-        n=0;
+        n = 0;
 
         printf("*************\n");
         printf(" NYP, 2021\n");
@@ -79,12 +74,11 @@ int main() {
     return 0;
 }
 
-void print_image(FILE *fptr)
-{
+void print_image(FILE *fptr) {
     char read_string[MAX_LEN];
 
-    while(fgets(read_string,sizeof(read_string),fptr) != NULL)
-        printf("%s",read_string);
+    while (fgets(read_string, sizeof(read_string), fptr) != NULL)
+        printf("%s", read_string);
 }
 
 int checker(char *a, int n) {
@@ -94,7 +88,7 @@ int checker(char *a, int n) {
 
 
     for (int i = 0; i < lena;) {
-        if  (a[i] < 0){
+        if (a[i] < 0) {
             n = 1;
             return n;
         } else if (!isdigit(a[i])) {
@@ -104,9 +98,9 @@ int checker(char *a, int n) {
         ++i;
     }
 
-    if (n != 1 && n != 2) {
+    if (1 != n && 2 != n) {
         newa = (float) strtod(a, NULL);
-        if (newa == 1){
+        if ( 1 == newa) {
             printf("\n");
             printf("Basic Rechnungen: \n");
             printf(" \t ----------------------- \n");
@@ -140,23 +134,22 @@ int checker(char *a, int n) {
                     n = 5;
                     return n;
                 case 4:
-                    n =6;
+                    n = 6;
                     return n;
                 case 5:
-                    n=7;
+                    n = 7;
                     return n;
                 case 6:
-                    n=8;
+                    n = 8;
                     return n;
                 case 7:
-                    n=9;
+                    n = 9;
                     return n;
                 default:
                     n = 1;
                     return n;
             }
-        }
-        else if (newa == 2){
+        } else if (2 == newa) {
             printf("\n");
             printf("2D FORMEN: \n");
             printf("\t --------------- \n");
@@ -177,26 +170,25 @@ int checker(char *a, int n) {
             newchosen = (int) strtod(b, NULL);
             switch (newchosen) {
                 case 1:
-                    n=10;
+                    n = 10;
                     return n;
                 case 2:
-                    n=11;
+                    n = 11;
                     return n;
                 case 3:
-                    n=12;
+                    n = 12;
                     return n;
                 case 4:
-                    n=13;
+                    n = 13;
                     return n;
                 case 5:
-                    n=14;
+                    n = 14;
                     return n;
                 default:
                     n = 1;
                     return n;
             }
-        }
-        else if (newa == 3){
+        } else if (3 == newa) {
             printf("\n");
             printf("3D FORMEN: \n");
             printf("\t ---------------\n");
@@ -227,18 +219,17 @@ int checker(char *a, int n) {
                     n = 17;
                     return n;
                 case 4:
-                    n =18;
+                    n = 18;
                     return n;
                 case 5:
-                    n=19;
+                    n = 19;
                     return n;
                 default:
                     n = 1;
                     return n;
             }
 
-        }
-        else if (newa == 4){
+        } else if (4 == newa) {
             printf("\n");
             printf("Life Science: \n");
             printf(" \t ------------------------------- \n");
@@ -247,7 +238,6 @@ int checker(char *a, int n) {
             printf("\t| 3 - Kalorienbedarf Rechner\t|\n");
             printf(" \t ------------------------------- \n");
             printf("\n");
-
 
 
             fflush(stdin);
@@ -260,20 +250,19 @@ int checker(char *a, int n) {
             newchosen = (int) strtod(b, NULL);
             switch (newchosen) {
                 case 1:
-                    n=20;
+                    n = 20;
                     return n;
                 case 2:
-                    n=21;
+                    n = 21;
                     return n;
                 case 3:
-                    n=22;
+                    n = 22;
                     return n;
                 default:
                     n = 1;
                     return n;
             }
-        }
-        else{
+        } else {
             printf("Ung\x81ltige Eingabe\n");
         }
     }
@@ -309,7 +298,8 @@ void switche(int n) {
             sub();
             break;
 
-        case 5:system("cls");
+        case 5:
+            system("cls");
             fflush(stdin);
             divi();
 
@@ -403,6 +393,8 @@ void switche(int n) {
             fflush(stdin);
             kalorien();
             break;
+        default:
+            break;
 
     }
 
@@ -427,17 +419,17 @@ int cont() {
 
         no = 0;
         weiter = strcmp(y, str2);
-        if (strcmp(y, str2) != 0) {
-            if (strcmp(y, str1) != 0) {
+        if ( 0 != strcmp(y, str2)) {
+            if ( 0 != strcmp(y, str1)) {
                 printf("ERROR: ung\x81ltige Eingabe\n");
                 no = 1;
             }
-        } else if (strcmp(y, str1) == 0) {
+        } else if ( 0 == strcmp(y, str1)) {
             exit(0);
         } else {
             no = 0;
         }
         system("cls");
-    } while (no != 0);
+    } while ( 0 != no);
     return weiter;//loop
 }

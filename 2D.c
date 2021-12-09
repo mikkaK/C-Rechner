@@ -4,13 +4,14 @@
 
 #include "2D.h"
 #include <stdio.h>
+
 #define pi 3.1415926
 
-double circle(){
+double circle() {
     double kDiameter;
     dCheck:
     printf("Gib den Durchmesser deines Kreises an: \n");
-    while (scanf("%lf%*[0-9]", &kDiameter) != 1){
+    while (scanf("%lf%*[0-9]", &kDiameter) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
@@ -27,11 +28,11 @@ double circle(){
     return 0;
 }
 
-double square(){
+double square() {
     double sSquare;
     squareCheck:
     printf("Gib die Seitenl\x84nge deines Quadrates an: \n");
-    while (scanf("%lf%*[0-9]",  &sSquare) != 1){
+    while (scanf("%lf%*[0-9]", &sSquare) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
@@ -47,11 +48,11 @@ double square(){
     return 0;
 }
 
-double rectangle(){
+double rectangle() {
     double sRectangleA;
     rACheck:
     printf("Gib die l\x84nge deines Rechtecks an: \n");
-    while (scanf("%lf%*[0-9]",  &sRectangleA) != 1){
+    while (scanf("%lf%*[0-9]", &sRectangleA) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
@@ -66,7 +67,7 @@ double rectangle(){
     double sRectangleB;
     rBCheck:
     printf("Gib die breite deines Rechtecks an: \n");
-    while (scanf("%lf%*[0-9]",  &sRectangleB) != 1){
+    while (scanf("%lf%*[0-9]", &sRectangleB) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
@@ -120,7 +121,7 @@ double triangle() {
 
 }
 
-double trapez(){
+double trapez() {
     double trapezGrundlinie;
     double trapezDeckenlinie;
     double trapezHoehe;
