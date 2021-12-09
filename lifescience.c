@@ -35,6 +35,7 @@ double alk() {
 
     gesch: printf("Geben sie ihr Geschlecht an: F / M \n");
     scanf("%c", &r);
+    while (!feof(stdin) && fgetc(stdin) != '\n');
     if(r == 'f' || r == 'F'){
         faktor = 0.6;
     }else if(r == 'm' || r == 'M'){
