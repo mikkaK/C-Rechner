@@ -101,7 +101,6 @@ double zylinder() {
     }
     return 0;
 }
-
 double kegel() {
     double kegelDurchmesser;
     double kegelHoehe;
