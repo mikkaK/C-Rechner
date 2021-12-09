@@ -5,6 +5,6 @@
 #ifndef C_RECHNER_LIFESCIENCE_H
 #define C_RECHNER_LIFESCIENCE_H
 double bmi();
-double alk();
-double kalorien();
+double alc();
+double calorie();
 #endif //C_RECHNER_LIFESCIENCE_H
