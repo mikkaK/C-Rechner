@@ -16,7 +16,7 @@ double circle() {
         error1();
     }
 
-    if (kDiameter < 0){
+    if (kDiameter < 0) {
         error2();
         goto dCheck;
     }
@@ -35,7 +35,7 @@ double square() {
         error1();
     }
 
-    if (sSquare < 0){
+    if (sSquare < 0) {
         error2();
         goto squareCheck;
     }
@@ -53,7 +53,7 @@ double rectangle() {
         error1();
     }
 
-    if (sRectangleA < 0){
+    if (sRectangleA < 0) {
         error2();
         goto rACheck;
     }
@@ -66,7 +66,7 @@ double rectangle() {
         error1();
     }
 
-    if (sRectangleB < 0){
+    if (sRectangleB < 0) {
         error2();
         goto rBCheck;
     }
@@ -86,7 +86,7 @@ double triangle() {
         error1();
     }
 
-    if (gTriangle < 0){
+    if (gTriangle < 0) {
         error2();
         goto gCheck;
     }
@@ -97,7 +97,7 @@ double triangle() {
         error1();
     }
 
-    if (hTriangle < 0){
+    if (hTriangle < 0) {
         error2();
         goto hCheck;
     }
@@ -119,7 +119,7 @@ double trapezoid() {
         error1();
     }
 
-    if (trapezoidGroundLine < 0){
+    if (trapezoidGroundLine < 0) {
         error2();
         goto gTrapezoid;
 
@@ -131,7 +131,7 @@ double trapezoid() {
         error1();
     }
 
-    if (trapezTopLine < 0){
+    if (trapezTopLine < 0) {
         error2();
         goto dCheck;
 
@@ -143,7 +143,7 @@ double trapezoid() {
         error1();
     }
 
-    if (trapezoidHeight < 0){
+    if (trapezoidHeight < 0) {
         error2();
         goto hCheck;
     }
