@@ -102,15 +102,6 @@ double kegel() {
 }
 
 
-int ausfueren() {
-    kugel();
-    wurfel();
-    quader();
-    zylinder();
-    kegel();
-
-}
-
 
 
 
