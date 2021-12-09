@@ -20,12 +20,10 @@ double loop() {
     char c;
     double b = 0;
     
-    
+    fflush(stdin);
 frage:
     printf("M\x94""chten Sie eine weitere Zahl hinzuf\x81gen: <Y>=JA <N>=NEIN\n");
     scanf("%c", &c);
-
-    fflush(stdin);
     
     switch(toupper(c)){
         case 'Y':
@@ -37,7 +35,7 @@ frage:
             break;
 
         default:
-            printf("Keine g\x81ltige Eingabe!");
+            printf("Keine g\x81ltige Eingabe!\n");
             goto frage;
 
     }
