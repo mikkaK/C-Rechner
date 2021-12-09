@@ -11,6 +11,7 @@
  * and open the template in the editor.
  */
 #include <stdio.h>
+#include <ctype.h>
 
 
 
@@ -24,12 +25,12 @@ frage:
     printf("Mächten Sie eine weitere Zahl hinzufügen: <Y>=JA <N>=NEIN\n");
     scanf("%c", &c);
 
-    switch(c.toUpperCase()){
-        case Y:
+    switch(toupper(c)){
+        case 'Y':
             b = 0;
             break;
 
-        case N:
+        case 'N':
             b = 1;
             break;
 
