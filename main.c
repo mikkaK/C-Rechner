@@ -59,7 +59,7 @@ int main() {
 
         //input
         fflush(stdin);
-        printf("Waehle weise: ");
+        printf("W\x84hle weise: ");
         scanf("%100[^\n]", buffer);
         fflush(stdin);
         char *a = (char *) malloc(strlen(buffer) + 1);
@@ -119,7 +119,7 @@ int checker(char *a, int n) {
 
 
             fflush(stdin);
-            printf("Waehle weise: ");
+            printf("W\x84hle weise: ");
             scanf("%100[^\n]", buffer);
             fflush(stdin);
             char *b = (char *) malloc(strlen(buffer) + 1);
@@ -165,7 +165,7 @@ int checker(char *a, int n) {
             printf("\t --------------- \n");
 
             fflush(stdin);
-            printf("Waehle weise: ");
+            printf("W\x84hle weise: ");
             scanf("%100[^\n]", buffer);
             fflush(stdin);
             char *b = (char *) malloc(strlen(buffer) + 1);
@@ -205,7 +205,7 @@ int checker(char *a, int n) {
             printf("\t ---------------\n");
 
             fflush(stdin);
-            printf("Waehle weise: ");
+            printf("W\x84hle weise: ");
             scanf("%100[^\n]", buffer);
             fflush(stdin);
             char *b = (char *) malloc(strlen(buffer) + 1);
@@ -248,7 +248,7 @@ int checker(char *a, int n) {
 
 
             fflush(stdin);
-            printf("Waehle weise: ");
+            printf("W\x84hle weise: ");
             scanf("%100[^\n]", buffer);
             fflush(stdin);
             char *b = (char *) malloc(strlen(buffer) + 1);
@@ -271,7 +271,7 @@ int checker(char *a, int n) {
             }
         }
         else{
-            printf("Ungueltige Eingabe\n");
+            printf("Ung\x81ltige Eingabe\n");
         }
     }
     return n;
@@ -283,7 +283,7 @@ void switche(int n) {
         case 1:
             printf("------------------------------------------------------\n");
             printf("ERROR: \t\t");
-            printf("Diese Zahl ist nicht gueltig!\n");
+            printf("Diese Zahl ist nicht g\x81ltig!\n");
             printf("------------------------------------------------------\n");
             break;
 
@@ -423,7 +423,7 @@ int cont() {
         weiter = strcmp(y, str2);
         if (strcmp(y, str2) != 0) {
             if (strcmp(y, str1) != 0) {
-                printf("ERROR: ungueltige Eingabe\n");
+                printf("ERROR: ung\x81ltige Eingabe\n");
                 no = 1;
             }
         } else if (strcmp(y, str1) == 0) {
