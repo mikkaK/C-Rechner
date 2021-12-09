@@ -114,7 +114,7 @@ double cone() {
         error1();
     }
     if (coned > 0 && coneh > 0) {
-        cone = (coned / 2 * pi) * (1.0 / 3.0) * coneh;
+        cone = (((coned / 2) * (coned / 2)) * pi) * (1.0 / 3.0) * coneh;
         printf("Das Volumen deines Kegels ist: %2.lf\n", cone);
     } else {
         printf("Falsche Eingabe! Versuche es erneut\n");
