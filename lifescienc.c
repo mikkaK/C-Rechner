@@ -9,7 +9,7 @@ double bmi() {
     double grosse;
     double gewicht;
     inputbmi:
-    printf("Gib deine aktuelle Groesse in m an: \n");
+    printf("Gib deine aktuelle Gr\x94sse in m an: \n");
     while (scanf("%lf%*[0-9]", &grosse) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
@@ -102,14 +102,14 @@ double kalorien() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    printf("Gib deine aktuelle Groesse an (in cm): \n");
+    printf("Gib deine aktuelle Gr\x94sse an (in cm): \n");
     while (scanf("%lf%*[0-9]", &grosse) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
     if(alter > 0 && grosse > 0 && gewicht > 0) {
         double kalorienBedarf = (faktor + (faktor2 * gewicht) + (faktor3 * grosse) - (faktor4 * alter));
-        printf("Dein taeglicher Kalorienbedarf ist: %lf Kalorien\n", kalorienBedarf);
+        printf("Dein t\x84glicher Kalorienbedarf ist: %lf Kalorien\n", kalorienBedarf);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputkalorien;
