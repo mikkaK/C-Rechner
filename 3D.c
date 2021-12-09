@@ -55,7 +55,6 @@ double quader() {
             printf("Falsche Eingabe! Versuche es erneut\n");
             while (!feof(stdin) && fgetc(stdin) != '\n');
         }
-
         printf("Gib die zweite Seitenl\x84nge deines Quaders an: \n");
         while (scanf("%lf%*[0-9]", &seitenlang2) != 1) {
             printf("Falsche Eingabe! Versuche es erneut\n");
