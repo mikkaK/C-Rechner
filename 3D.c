@@ -91,7 +91,7 @@ double cylinder() {
         error1();
     }
     if (cylinderh > 0 && cylinderd > 0) {
-        cylinder = (cylinderd / 2 * pi) * cylinderh;
+        cylinder = (((cylinderd / 2) * (cylinderd / 2)) * pi) * cylinderh;
         printf("Das Volumen deines Zylinders ist: %2.lf\n", cylinder);
     } else {
         printf("Falsche Eingabe! Versuche es erneut\n");
