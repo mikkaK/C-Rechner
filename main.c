@@ -25,8 +25,8 @@ int main() {
     int n;
     char buffer[101];
 
-    int weiter = 0;
-    while (0 == weiter) {
+    int continue_loop = 0;
+    while (0 == continue_loop) {
 
         //welcome message
         char *filename = "image.txt";
@@ -68,7 +68,7 @@ int main() {
 
         switche(n);
 
-        weiter = cont();
+        continue_loop = cont();
 
     }
     return 0;
@@ -404,7 +404,7 @@ int cont() {
     char buffer[101];
     char str2[] = "w";
     char str1[] = "b";
-    int weiter;
+    int conti;
     int no;
     do {
         printf("\n");
@@ -418,7 +418,7 @@ int cont() {
         strcpy(y, buffer);
 
         no = 0;
-        weiter = strcmp(y, str2);
+        conti = strcmp(y, str2);
         if ( 0 != strcmp(y, str2)) {
             if ( 0 != strcmp(y, str1)) {
                 printf("ERROR: ung\x81ltige Eingabe\n");
@@ -431,5 +431,5 @@ int cont() {
         }
         system("cls");
     } while ( 0 != no);
-    return weiter;//loop
+    return conti;//loop
 }
