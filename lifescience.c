@@ -91,7 +91,7 @@ double calorie() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto gesch;
     }
-    inputkalorien:
+    inputcalories:
     printf("Gib dein aktuelles Alter an : \n");
     while ( 1 != scanf("%lf%*[0-9]", &age)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
@@ -112,7 +112,7 @@ double calorie() {
         printf("Dein t\x84glicher Kalorienbedarf ist: %lf Kalorien\n", dailycal);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
-        goto inputkalorien;
+        goto inputcalories;
     }
     return 0;
 }
