@@ -42,14 +42,19 @@ int main() {
         print_image(fptr);
         fclose(fptr);
 
-        printf("NYP, 2021\n");
-        printf("mk/cz/ls/js\n");
+        printf("*************\n");
+        printf(" NYP, 2021\n");
+        printf(" mk/cz/ls/js\n");
+        printf("*************\n");
         printf("\n");
         printf("\tMENU: \n");
-        printf("1 - Basic Rechnungen\n");
-        printf("2 - 2D Formen berechnen\n");
-        printf("3 - 3D Formen berechnen\n");
-        printf("4 - Life Science\n");
+        printf(" -------------------------------\n");
+        printf("| 1 - Basic Rechnungen\t\t|\n");
+        printf("| 2 - 2D Formen berechnen\t|\n");
+        printf("| 3 - 3D Formen berechnen\t|\n");
+        printf("| 4 - Life Science\t\t|\n");
+        printf(" -------------------------------\n");
+
         printf("\n");
 
         //input
@@ -99,14 +104,18 @@ int checker(char *a, int n) {
     if (n != 1 && n != 2) {
         newa = (float) strtod(a, NULL);
         if (newa == 1){
+            printf("\n");
             printf("Basic Rechnungen: \n");
-            printf("\t 1 - Summieren\n");
-            printf("\t 2 - Subtrahieren\n");
-            printf("\t 3 - Dividieren\n");
-            printf("\t 4 - Multiplizieren\n");
-            printf("\t 5 - Exponent\n");
-            printf("\t 6 - Wurzel\n");
-            printf("\t 7 - Fakultativ\n");
+            printf(" \t ----------------------- \n");
+            printf("\t| 1 - Summieren\t\t|\n");
+            printf("\t| 2 - Subtrahieren\t|\n");
+            printf("\t| 3 - Dividieren\t|\n");
+            printf("\t| 4 - Multiplizieren\t|\n");
+            printf("\t| 5 - Exponent\t\t|\n");
+            printf("\t| 6 - Wurzel\t\t|\n");
+            printf("\t| 7 - Fakultativ\t|\n");
+            printf(" \t ----------------------- \n");
+            printf("\n");
 
 
             fflush(stdin);
@@ -145,12 +154,15 @@ int checker(char *a, int n) {
             }
         }
         else if (newa == 2){
+            printf("\n");
             printf("2D FORMEN: \n");
-            printf("\t 1 - Kreis\n");
-            printf("\t 2 - Quadrat\n");
-            printf("\t 3 - Rechteck\n");
-            printf("\t 4 - Dreieck\n");
-            printf("\t 5 - Trapez\n");
+            printf("\t --------------- \n");
+            printf("\t| 1 - Kreis\t|\n");
+            printf("\t| 2 - Quadrat\t|\n");
+            printf("\t| 3 - Rechteck\t|\n");
+            printf("\t| 4 - Dreieck\t|\n");
+            printf("\t| 5 - Trapez\t|\n");
+            printf("\t --------------- \n");
 
             fflush(stdin);
             printf("Waehle weise: ");
@@ -182,12 +194,15 @@ int checker(char *a, int n) {
             }
         }
         else if (newa == 3){
+            printf("\n");
             printf("3D FORMEN: \n");
-            printf("\t 1 - Kugel\n");
-            printf("\t 2 - Wuerfel\n");
-            printf("\t 3 - Quader\n");
-            printf("\t 4 - Zylinder\n");
-            printf("\t 5 - Kegel\n");
+            printf("\t ---------------\n");
+            printf("\t| 1 - Kugel\t|\n");
+            printf("\t| 2 - Wuerfel\t|\n");
+            printf("\t| 3 - Quader\t|\n");
+            printf("\t| 4 - Zylinder\t|\n");
+            printf("\t| 5 - Kegel\t|\n");
+            printf("\t ---------------\n");
 
             fflush(stdin);
             printf("Waehle weise: ");
@@ -221,10 +236,15 @@ int checker(char *a, int n) {
 
         }
         else if (newa == 4){
+            printf("\n");
             printf("Life Science: \n");
-            printf("\t 1 - BMI Rechner\n");
-            printf("\t 2 - Alkoholgehalts Rechner\n");
-            printf("\t 3 - Kalorienbedarf Rechner\n");
+            printf(" \t ------------------------------- \n");
+            printf("\t| 1 - BMI Rechner\t\t|\n");
+            printf("\t| 2 - Alkoholgehalts Rechner\t|\n");
+            printf("\t| 3 - Kalorienbedarf Rechner\t|\n");
+            printf(" \t ------------------------------- \n");
+            printf("\n");
+
 
 
             fflush(stdin);
@@ -275,89 +295,108 @@ void switche(int n) {
             break;
 
         case 3:
+            system("cls");
             fflush(stdin);
             sum();
             break;
 
         case 4:
+            system("cls");
             fflush(stdin);
             sub();
             break;
 
-        case 5:
+        case 5:system("cls");
             fflush(stdin);
             divi();
 
             break;
 
         case 6:
+            system("cls");
             fflush(stdin);
             mult();
             break;
 
         case 7:
+            system("cls");
             fflush(stdin);
             expo();
             break;
 
         case 8:
+            system("cls");
             fflush(stdin);
             wurz();
             break;
 
         case 9:
+            system("cls");
             fflush(stdin);
             fak();
             break;
         case 10:
+            system("cls");
             fflush(stdin);
             circle();
             break;
         case 11:
+            system("cls");
             fflush(stdin);
             square();
             break;
         case 12:
+            system("cls");
             fflush(stdin);
             rectangle();
             break;
         case 13:
+            system("cls");
             fflush(stdin);
             triangle();
             break;
         case 14:
+            system("cls");
             fflush(stdin);
             trapez();
             break;
         case 15:
+            system("cls");
             fflush(stdin);
             kugel();
             break;
         case 16:
+            system("cls");
             fflush(stdin);
             wurfel();
             break;
         case 17:
+            system("cls");
             fflush(stdin);
             quader();
             break;
         case 18:
+            system("cls");
             fflush(stdin);
             zylinder();
             break;
         case 19:
+            system("cls");
             fflush(stdin);
             kegel();
             break;
         case 20:
+            system("cls");
             fflush(stdin);
             bmi();
             break;
         case 21:
+            system("cls");
             fflush(stdin);
             alk();
             break;
         case 22:
+            system("cls");
             fflush(stdin);
             kalorien();
             break;
