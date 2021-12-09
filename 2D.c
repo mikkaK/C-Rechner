@@ -9,7 +9,7 @@
 double circle(){
     double kDiameter;
     printf("Gib den Durchmesser deines Kreises an: \n");
-    while (scanf("%lf%*[0-9]",  &kDiameter) != 1){
+    while (scanf("%lf%*[0-9]", &kDiameter) != 1){
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
@@ -48,7 +48,7 @@ double rectangle(){
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
     double aRectangle = sRectangleA * sRectangleB;
-    printf("Die Flaeche deines Rechtecks betraegt: %lf\n", aRectangle);
+    printf("Die Fl\x84che deines Rechtecks betr\x84gt: %lf\n", aRectangle);
     return 0;
 }
 
