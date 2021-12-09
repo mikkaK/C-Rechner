@@ -22,7 +22,7 @@ double loop() {
     
     
 frage:
-    printf("M'\x94'chten Sie eine weitere Zahl hinzuf\x81gen: <Y>=JA <N>=NEIN\n");
+    printf("M\x94""chten Sie eine weitere Zahl hinzuf\x81gen: <Y>=JA <N>=NEIN\n");
     scanf("%c", &c);
 
     fflush(stdin);
@@ -59,7 +59,7 @@ double sum() {
 
     while(1 != b){
         
-        printf("Geben Sie den n'\x8e'chsten Summanden ein:\n");
+        printf("Geben Sie den n\x84""chsten Summanden ein:\n");
         while (1 != scanf("%lf%*[0-9]", &a)) {
             error1();
         }
@@ -129,7 +129,7 @@ double divi() {
     while(1 != b){
         
         fehler:
-        printf("Geben Sie den n'\x8e'chsten Summanden ein:\n");
+        printf("Geben Sie den Divisor ein:\n");
         while (1 != scanf("%lf%*[0-9]", &a)) {
             error1();
         }
@@ -162,7 +162,7 @@ double mult() {
     
     while(1 != b){
         
-        printf("Geben Sie den n'\x8e'chsten Summanden ein:\n");
+        printf("Geben Sie den Multiplikanden ein:\n");
         while (1 != scanf("%lf%*[0-9]", &a)) {
             error1();
         }
