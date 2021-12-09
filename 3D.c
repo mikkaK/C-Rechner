@@ -56,13 +56,13 @@ double quader() {
             while (!feof(stdin) && fgetc(stdin) != '\n');
         }
 
-        printf("Gib die erste Seitenl\x84nge deines Quaders an: \n");
+        printf("Gib die zweite Seitenl\x84nge deines Quaders an: \n");
         while (scanf("%lf%*[0-9]", &seitenlang2) != 1) {
             printf("Falsche Eingabe! Versuche es erneut\n");
             while (!feof(stdin) && fgetc(stdin) != '\n');
         }
 
-        printf("Gib die erste Seitenl\x84nge deines Quaders an: \n");
+        printf("Gib die dritte Seitenl\x84nge deines Quaders an: \n");
         while (scanf("%lf%*[0-9]", &seitenlang3) != 1) {
             printf("Falsche Eingabe! Versuche es erneut\n");
             while (!feof(stdin) && fgetc(stdin) != '\n');
