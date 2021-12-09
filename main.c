@@ -13,7 +13,6 @@ unsigned int lena = 0;
 
 float newa;
 
-
 void print_image(FILE *fptr);
 
 int checker(char *a, int n);
