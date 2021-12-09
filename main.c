@@ -4,7 +4,8 @@
 #include <ctype.h>
 #include "2D.h"
 #include "3D.h"
-
+#include "lifescienc.h"
+#include "basecalc.h"
 #define MAX_LEN 128
 
 int lena = 0;
@@ -48,6 +49,7 @@ int main() {
         printf("1 - Basic Rechnungen\n");
         printf("2 - 2D Formen berechnen\n");
         printf("3 - 3D Formen berechnen\n");
+        printf("4 - Life Science\n");
         printf("\n");
 
         //input
@@ -160,13 +162,17 @@ int checker(char *a, int n) {
             newchosen = (int) strtod(b, NULL);
             switch (newchosen) {
                 case 1:
-                    circle();
-                case 2: square();
-
+                    n=10;
+                    return n;
+                case 2:
+                    n=11;
+                    return n;
                 case 3:
-                    rectangle();
+                    n=12;
+                    return n;
                 case 4:
-                    triangle();
+                    n=13;
+                    return n;
                 case 5:
                     n=14;
                     return n;
@@ -214,6 +220,36 @@ int checker(char *a, int n) {
             }
 
         }
+        else if (newa == 4){
+            printf("Life Science: \n");
+            printf("\t 1 - BMI Rechner\n");
+            printf("\t 2 - Alkoholgehalts Rechner\n");
+            printf("\t 3 - Kalorienbedarf Rechner\n");
+
+
+            fflush(stdin);
+            printf("Waehle weise: ");
+            scanf("%100[^\n]", buffer);
+            fflush(stdin);
+            char *b = (char *) malloc(strlen(buffer) + 1);
+            strcpy(b, buffer);
+            printf("\n");
+            newchosen = (int) strtod(b, NULL);
+            switch (newchosen) {
+                case 1:
+                    n=20;
+                    return n;
+                case 2:
+                    n=21;
+                    return n;
+                case 3:
+                    n=22;
+                    return n;
+                default:
+                    n = 1;
+                    return n;
+            }
+        }
         else{
             printf("Ungueltige Eingabe\n");
         }
@@ -239,62 +275,91 @@ void switche(int n) {
             break;
 
         case 3:
-            //Summieren
+            fflush(stdin);
+            sum();
             break;
 
         case 4:
-            //subtrahieren
+            fflush(stdin);
+            sub();
             break;
 
         case 5:
-            //Dividieren
+            fflush(stdin);
+            divi();
 
             break;
 
         case 6:
-            //Multiplizieren
+            fflush(stdin);
+            mult();
             break;
 
         case 7:
-            //Exponent
+            fflush(stdin);
+            expo();
             break;
 
         case 8:
-            //Wurzel
+            fflush(stdin);
+            wurz();
             break;
 
         case 9:
-            //Fakultativ
+            fflush(stdin);
+            fak();
             break;
         case 10:
-            //Fakultativ
+            fflush(stdin);
+            circle();
             break;
         case 11:
-            //Fakultativ
+            fflush(stdin);
+            square();
             break;
         case 12:
-            //Fakultativ
+            fflush(stdin);
+            rectangle();
             break;
         case 13:
-            //Fakultativ
+            fflush(stdin);
+            triangle();
             break;
         case 14:
-            //Fakultativ
+            fflush(stdin);
+            trapez();
             break;
         case 15:
-            //Fakultativ
+            fflush(stdin);
+            kugel();
             break;
         case 16:
-            //Fakultativ
+            fflush(stdin);
+            wurfel();
             break;
         case 17:
-            //Fakultativ
+            fflush(stdin);
+            quader();
             break;
         case 18:
-            //Fakultativ
+            fflush(stdin);
+            zylinder();
             break;
         case 19:
-            //Fakultativ
+            fflush(stdin);
+            kegel();
+            break;
+        case 20:
+            fflush(stdin);
+            bmi();
+            break;
+        case 21:
+            fflush(stdin);
+            alk();
+            break;
+        case 22:
+            fflush(stdin);
+            kalorien();
             break;
 
     }

@@ -16,7 +16,7 @@ double circle(){
 
     double kRadius = kDiameter / 2;
     double kArea = kRadius * kRadius * pi;
-    printf("Die Fflaeche deines Kreises betraegt: %lf\n", kArea);
+    printf("Die Flaeche deines Kreises betraegt: %lf\n", kArea);
     return 0;
 }
 
