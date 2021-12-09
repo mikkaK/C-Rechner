@@ -351,7 +351,7 @@ void switche(int n) {
         case 14:
             system("cls");
             fflush(stdin);
-            trapez();
+            trapezoid();
             break;
         case 15:
             system("cls");

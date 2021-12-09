@@ -107,30 +107,31 @@ double triangle() {
     return 0;
 }
 
-double trapez() {
-    double trapezGrundlinie;
-    double trapezDeckenlinie;
-    double trapezHoehe;
+double trapezoid() {
+    double trapezoidGroundLine;
+    double trapezTopLine;
+    double trapezoidHeight;
+    double trapezoid;
 
-    gTrapez:
+    gTrapezoid:
     printf("Gib die L\x84nge der Grundlinie deines Trapez an (in cm): \n");
-    while (scanf("%lf%*[0-9]", &trapezGrundlinie) != 1) {
+    while (scanf("%lf%*[0-9]", &trapezoidGroundLine) != 1) {
         error1();
     }
 
-    if (trapezGrundlinie < 0){
+    if (trapezoidGroundLine < 0){
         error2();
-        goto gTrapez;
+        goto gTrapezoid;
 
     }
 
     dCheck:
     printf("Gib die L\x84nge der Deckenlinie deines Trapez an an (in cm): \n");
-    while (scanf("%lf%*[0-9]", &trapezDeckenlinie) != 1) {
+    while (scanf("%lf%*[0-9]", &trapezTopLine) != 1) {
         error1();
     }
 
-    if (trapezDeckenlinie < 0){
+    if (trapezTopLine < 0){
         error2();
         goto dCheck;
 
@@ -138,15 +139,15 @@ double trapez() {
 
     hCheck:
     printf("Gib die H\x94he deines Trapez an an (in cm): \n");
-    while (scanf("%lf%*[0-9]", &trapezHoehe) != 1) {
+    while (scanf("%lf%*[0-9]", &trapezoidHeight) != 1) {
         error1();
     }
 
-    if (trapezHoehe < 0){
+    if (trapezoidHeight < 0){
         error2();
         goto hCheck;
     }
-    double trapez = ((trapezGrundlinie + trapezDeckenlinie) / 2) * trapezHoehe;
-    printf("Das Volumen deines Trapez ist: %lf cm^3\n", trapez);
+    trapezoid = ((trapezoidGroundLine + trapezTopLine) / 2) * trapezoidHeight;
+    printf("Das Volumen deines Trapez ist: %lf cm^3\n", trapezoid);
     return 0;
 }
