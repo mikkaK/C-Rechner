@@ -9,7 +9,7 @@
 double circle(){
     double kDiameter;
     printf("Gib den Durchmesser deines Kreises an: \n");
-    while (scanf("%lf%*[0-9]",  &kDiameter) != 1){
+    while (scanf("%lf%*[0-9]", &kDiameter) != 1){
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
