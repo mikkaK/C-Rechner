@@ -1,6 +1,3 @@
-//
-// Created by kumme on 08.12.2021.
-//
 
 #include "lifescience.h"
 #include <stdio.h>
