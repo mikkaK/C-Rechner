@@ -155,6 +155,7 @@ double wurz() {
 
     double a = 0.00;
     double b = 0.00;
+    double c = 0.00;
     double x = 1.00;
 
     printf("Geben Sie den Radikanden ein:\n");
@@ -162,16 +163,32 @@ double wurz() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-
-    while (1)
-    {
-        b = b + 1;
-        x = (a / x + x) / 2;
-        if (b == a + 1) { break; }
+    
+    if(a < 0){
+        
+        c = 2*a;
+        a = a-c;
+        
+        while (1)
+        {
+            b = b + 1;
+            x = (a / x + x) / 2;
+            if (b == a + 1) { break; }
+        }
+        
+        printf("Das Ergebnis lautet: %lfi\n", x);
+        
+    } else {
+    
+        while (1)
+        {
+            b = b + 1;
+            x = (a / x + x) / 2;
+            if (b == a + 1) { break; }
+        }
+        printf("Das Ergebnis lautet: %lf\n", x);
     }
     
-    printf("Das Ergebnis lautet: %lf\n", x);
-
     return x;
 }
 
