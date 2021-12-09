@@ -14,34 +14,56 @@
 
 
 
+double loop() {
+    
+    char c;
+    double b = 0;
+    
+    
+frage:
+    printf("Mächten Sie eine weitere Zahl hinzufügen: <Y>=JA <N>=NEIN\n");
+    scanf("%c", &c);
+
+    switch(c.toUpperCase()){
+        case Y:
+            b = 0;
+            break;
+
+        case N:
+            b = 1;
+            break;
+
+        default:
+            printf("Keine gültige Eingabe!");
+            goto frage;
+
+    }
+    
+    return b;
+}
+
+
 double sum() {
 
     double a = 0;
     double b = 0;
     double x = 0;
-    char c;
 
     printf("Geben Sie den ersten Summanden ein:\n");
-    while (1 != scanf("%lf%*[0-9]", &a)) {
+    while (1 != scanf("%lf%*[0-9]", &x)) {
         error1();
     }
 
     while(1 != b){
         
         printf("Geben Sie den nächsten Summanden ein:\n");
-        while (1 != scanf("%lf%*[0-9]", &b)) {
+        while (1 != scanf("%lf%*[0-9]", &a)) {
             error1();
         }
         
-        printf("Mächten Sie eine weitere Zahl hinzufügen: <Y>=JA <N>=NEIN");
-        scanf("%c", &c);
-        
-        switch(c.toUpperCase()){
-            case Y:
-        }
-        
-        
         x = a + x;
+        
+        b = loop();
     }
 
     printf("Das Ergebnis lautet: %lf\n", x);
