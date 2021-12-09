@@ -412,8 +412,11 @@ int cont() {
     int weiter;
     int no;
     do {
-        printf("<b> beenden\n");
-        printf("<w> weiter\n");
+        printf("\n");
+        printf("\t ---------------\n");
+        printf("\t| <b> beenden?\t|\n");
+        printf("\t| <w> weiter?\t|\n");
+        printf("\t ---------------\n");
         fflush(stdin);
         scanf("%100[^\n]", buffer);
         char *y = (char *) malloc(strlen(buffer) + 1);
