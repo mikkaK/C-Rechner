@@ -110,19 +110,6 @@ double divi() {
     while (1 != scanf("%lf%*[0-9]", &x)) {
         error1();
     }
-
-    printf("Geben Sie den Divisor ein:\n");
-    while (1 != scanf("%lf%*[0-9]", &b)) {
-        error1();
-    }
-
-    if (0 == b) {
-        printf("Fehler, die Zahl kann nicht durch 0 geteilt werden!");
-    } else {
-        x = a / b;
-
-        printf("Das Ergebnis lautet: %lf\n", x);
-    }
     
     while(1 != b){
         
