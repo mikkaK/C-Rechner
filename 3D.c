@@ -11,7 +11,7 @@ double kugel() {
     double kugelDurchmesser;
     inputsphere:
     printf("Gib den Durchmesser deines Kugel an: \n");
-    while (scanf("%lf%*[0-9]%*[^-]", &kugelDurchmesser) != 1) {
+    while (1 != scanf("%lf%*[0-9]%*[^-]", &kugelDurchmesser)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
@@ -30,7 +30,7 @@ double wurfel() {
     double seitenlange;
     inputcube:
     printf("Gib die Seitenl\x84nge deines W\x81rfels an: \n");
-    while (scanf("%lf%*[0-9]", &seitenlange) != 1) {
+    while (1 != scanf("%lf%*[0-9]", &seitenlange)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
@@ -51,18 +51,18 @@ double quader() {
     double seitenlang3;
     inputcuboid:
     printf("Gib die erste Seitenl\x84nge deines Quaders an: \n");
-    while (scanf("%lf%*[0-9]", &seitenlang1) != 1) {
+    while (1 != scanf("%lf%*[0-9]", &seitenlang1)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
     printf("Gib die zweite Seitenl\x84nge deines Quaders an: \n");
-    while (scanf("%lf%*[0-9]", &seitenlang2) != 1) {
+    while (1 != scanf("%lf%*[0-9]", &seitenlang2)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
     printf("Gib die dritte Seitenl\x84nge deines Quaders an: \n");
-    while (scanf("%lf%*[0-9]", &seitenlang3) != 1) {
+    while (1 != scanf("%lf%*[0-9]", &seitenlang3)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
@@ -82,12 +82,12 @@ double zylinder() {
     double zylinderHoehe;
     inputcylinder:
     printf("Gib den Durchmesser deines Zylinder an: \n");
-    while (scanf("%lf%*[0-9]", &zylinderDurchmesser) != 1) {
+    while (1 != scanf("%lf%*[0-9]", &zylinderDurchmesser)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
     printf("Gib die H\x94he deines Zylinder an: \n");
-    while (scanf("%lf%*[0-9]", &zylinderHoehe) != 1) {
+    while (1 != scanf("%lf%*[0-9]", &zylinderHoehe)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
@@ -106,12 +106,12 @@ double kegel() {
     double kegelHoehe;
     inputcone:
     printf("Gib den Durchmesser deines Kegels an: \n");
-    while (scanf("%lf%*[0-9]", &kegelDurchmesser) != 1) {
+    while (1 != scanf("%lf%*[0-9]", &kegelDurchmesser)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
     printf("Gib die Hoehe deines Kegels an: \n");
-    while (scanf("%lf%*[0-9]", &kegelHoehe) != 1) {
+    while (1 != scanf("%lf%*[0-9]", &kegelHoehe)) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
