@@ -9,5 +9,5 @@ double square();
 double rectangle();
 double triangle();
 double circle();
-double trapez();
+double trapezoid();
 #endif //C_RECHNER_2D_H
