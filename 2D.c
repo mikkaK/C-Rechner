@@ -9,69 +9,72 @@
 #define pi 3.1415926
 
 double circle() {
-    double kDiameter;
+    double cDiameter;
+    double cRadius;
+    double cArea;
     dCheck:
     printf("Gib den Durchmesser deines Kreises an: \n");
-    while (scanf("%lf%*[0-9]", &kDiameter) != 1) {
+    while (scanf("%lf%*[0-9]", &cDiameter) != 1) {
         error1();
     }
 
-    if (kDiameter < 0){
+    if (cDiameter < 0) {
         error2();
         goto dCheck;
     }
 
-    double kRadius = kDiameter / 2;
-    double kArea = kRadius * kRadius * pi;
-    printf("Die Fl\x84""che deines Kreises betr\x84gt: %lf\n", kArea);
+    cRadius = cDiameter / 2;
+    cArea = cRadius * cRadius * pi;
+    printf("Die Fl\x84""che deines Kreises betr\x84gt: %lf\n", cArea);
     return 0;
 }
 
 double square() {
     double sSquare;
+    double aSquare;
     squareCheck:
     printf("Gib die Seitenl\x84nge deines Quadrates an: \n");
     while (scanf("%lf%*[0-9]", &sSquare) != 1) {
         error1();
     }
 
-    if (sSquare < 0){
+    if (sSquare < 0) {
         error2();
         goto squareCheck;
     }
 
-    double aSquare = sSquare * sSquare;
+    aSquare = sSquare * sSquare;
     printf("Die Fl\x84""che deines Qudrates betr\x84gt: %lf\n", aSquare);
     return 0;
 }
 
 double rectangle() {
     double sRectangleA;
+    double sRectangleB;
+    double aRectangle;
     rACheck:
     printf("Gib die l\x84nge deines Rechtecks an: \n");
     while (scanf("%lf%*[0-9]", &sRectangleA) != 1) {
         error1();
     }
 
-    if (sRectangleA < 0){
+    if (sRectangleA < 0) {
         error2();
         goto rACheck;
     }
 
-
-    double sRectangleB;
     rBCheck:
     printf("Gib die breite deines Rechtecks an: \n");
     while (scanf("%lf%*[0-9]", &sRectangleB) != 1) {
         error1();
     }
 
-    if (sRectangleB < 0){
+    if (sRectangleB < 0) {
         error2();
         goto rBCheck;
     }
 
-    double aRectangle = sRectangleA * sRectangleB;
+    aRectangle = sRectangleA * sRectangleB;
     printf("Die Fl\x84""che deines Rechtecks betr\x84gt: %lf\n", aRectangle);
     return 0;
 }
@@ -86,7 +89,7 @@ double triangle() {
         error1();
     }
 
-    if (gTriangle < 0){
+    if (gTriangle < 0) {
         error2();
         goto gCheck;
     }
@@ -97,7 +100,7 @@ double triangle() {
         error1();
     }
 
-    if (hTriangle < 0){
+    if (hTriangle < 0) {
         error2();
         goto hCheck;
     }
@@ -107,30 +110,31 @@ double triangle() {
     return 0;
 }
 
-double trapez() {
-    double trapezGrundlinie;
-    double trapezDeckenlinie;
-    double trapezHoehe;
+double trapezoid() {
+    double trapezoidGroundLine;
+    double trapezTopLine;
+    double trapezoidHeight;
+    double trapezoid;
 
-    gTrapez:
+    gTrapezoid:
     printf("Gib die L\x84nge der Grundlinie deines Trapez an (in cm): \n");
-    while (scanf("%lf%*[0-9]", &trapezGrundlinie) != 1) {
+    while (scanf("%lf%*[0-9]", &trapezoidGroundLine) != 1) {
         error1();
     }
 
-    if (trapezGrundlinie < 0){
+    if (trapezoidGroundLine < 0) {
         error2();
-        goto gTrapez;
+        goto gTrapezoid;
 
     }
 
     dCheck:
     printf("Gib die L\x84nge der Deckenlinie deines Trapez an an (in cm): \n");
-    while (scanf("%lf%*[0-9]", &trapezDeckenlinie) != 1) {
+    while (scanf("%lf%*[0-9]", &trapezTopLine) != 1) {
         error1();
     }
 
-    if (trapezDeckenlinie < 0){
+    if (trapezTopLine < 0) {
         error2();
         goto dCheck;
 
@@ -138,15 +142,15 @@ double trapez() {
 
     hCheck:
     printf("Gib die H\x94he deines Trapez an an (in cm): \n");
-    while (scanf("%lf%*[0-9]", &trapezHoehe) != 1) {
+    while (scanf("%lf%*[0-9]", &trapezoidHeight) != 1) {
         error1();
     }
 
-    if (trapezHoehe < 0){
+    if (trapezoidHeight < 0) {
         error2();
         goto hCheck;
     }
-    double trapez = ((trapezGrundlinie + trapezDeckenlinie) / 2) * trapezHoehe;
-    printf("Das Volumen deines Trapez ist: %lf cm^3\n", trapez);
+    trapezoid = ((trapezoidGroundLine + trapezTopLine) / 2) * trapezoidHeight;
+    printf("Das Volumen deines Trapez ist: %lf cm^3\n", trapezoid);
     return 0;
 }

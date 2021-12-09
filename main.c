@@ -351,32 +351,32 @@ void switche(int n) {
         case 14:
             system("cls");
             fflush(stdin);
-            trapez();
+            trapezoid();
             break;
         case 15:
             system("cls");
             fflush(stdin);
-            kugel();
+            sphere();
             break;
         case 16:
             system("cls");
             fflush(stdin);
-            wurfel();
+            dice();
             break;
         case 17:
             system("cls");
             fflush(stdin);
-            quader();
+            cuboid();
             break;
         case 18:
             system("cls");
             fflush(stdin);
-            zylinder();
+            cylinder();
             break;
         case 19:
             system("cls");
             fflush(stdin);
-            kegel();
+            cone();
             break;
         case 20:
             system("cls");
@@ -386,12 +386,12 @@ void switche(int n) {
         case 21:
             system("cls");
             fflush(stdin);
-            alk();
+            alc();
             break;
         case 22:
             system("cls");
             fflush(stdin);
-            kalorien();
+            calorie();
             break;
         default:
             break;
