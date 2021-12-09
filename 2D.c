@@ -24,7 +24,7 @@ double circle() {
 
     double kRadius = kDiameter / 2;
     double kArea = kRadius * kRadius * pi;
-    printf("Die Fl\x84che deines Kreises betr\x84gt: %lf\n", kArea);
+    printf("Die Fl\x84""che deines Kreises betr\x84gt: %lf\n", kArea);
     return 0;
 }
 
@@ -44,7 +44,7 @@ double square() {
     }
 
     double aSquare = sSquare * sSquare;
-    printf("Die Fl\x84che deines Qudrates betr\x84gt: %lf\n", aSquare);
+    printf("Die Fl\x84""che deines Qudrates betr\x84gt: %lf\n", aSquare);
     return 0;
 }
 
@@ -79,7 +79,7 @@ double rectangle() {
     }
 
     double aRectangle = sRectangleA * sRectangleB;
-    printf("Die Fl\x84che deines Rechtecks betr\x84gt: %lf\n", aRectangle);
+    printf("Die Fl\x84""che deines Rechtecks betr\x84gt: %lf\n", aRectangle);
     return 0;
 }
 
@@ -117,7 +117,7 @@ double triangle() {
 
     aTriangle = gTriangle * hTriangle / 2;
 
-    printf("Die Fl\x84che deines Dreiecks betr\x84gt: %lf\n", aTriangle);
+    printf("Die Fl\x84""che deines Dreiecks betr\x84gt: %lf\n", aTriangle);
 
 }
 
