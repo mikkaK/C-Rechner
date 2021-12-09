@@ -58,8 +58,8 @@ double alk() {
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
     if(alkInGramm > 0 && gewicht > 0) {
-        double bmi = (alkInGramm / (gewicht * faktor));
-        printf("Dein Alkoholgehalt ist: %lf Promille\n", bmi);
+        double alk = (alkInGramm / (gewicht * faktor));
+        printf("Dein Alkoholgehalt ist: %lf Promille\n", alk);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputalk;
