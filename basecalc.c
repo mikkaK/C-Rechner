@@ -33,7 +33,7 @@ double sum() {
 
     x = a+b;
 
-    printf("Das Ergebnis lautet: %fl\n", x);
+    printf("Das Ergebnis lautet: %lf\n", x);
     
     return x;
 }
@@ -55,7 +55,7 @@ double sub() {
 
     x = a-b;
     
-    printf("Das Ergebnis lautet: %fl\n", x);
+    printf("Das Ergebnis lautet: %lf\n", x);
     
     return x;
 }
@@ -80,7 +80,7 @@ double divi() {
         x = a/b;
     }
     
-    printf("Das Ergebnis lautet: %fl\n", x);
+    printf("Das Ergebnis lautet: %lf\n", x);
     
     return x;
 }
@@ -101,7 +101,7 @@ double mult() {
 
     x = a*b;
     
-    printf("Das Ergebnis lautet: %fl\n", x);
+    printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
 }
@@ -130,7 +130,7 @@ double expo() {
         }
     }
     
-    printf("Das Ergebnis lautet: %fl\n", x);
+    printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
 }
@@ -152,7 +152,7 @@ double wurz() {
         if (b == a + 1) { break; }
     }
     
-    printf("Das Ergebnis lautet: %fl\n", x);
+    printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
 }
@@ -170,7 +170,7 @@ double fak() {
         x=a*x;
     }
     
-    printf("Das Ergebnis lautet: %fl\n", x);
+    printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
 }
