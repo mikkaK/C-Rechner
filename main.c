@@ -9,12 +9,10 @@
 
 #define MAX_LEN 128
 
-int lena = 0;
-int lenb = 0;
-int lenc = 0;
+ unsigned int lena = 0;
+
 float newa;
-float newb;
-float newc;
+
 
 void print_image(FILE *fptr);
 
@@ -27,8 +25,7 @@ int cont();
 int main() {
     int n;
     char buffer[101];
-    char bufferb[101];
-    char bufferc[101];
+
     int weiter = 0;
     while (weiter == 0) {
 
@@ -403,6 +400,7 @@ void switche(int n) {
             fflush(stdin);
             kalorien();
             break;
+        default: break;
 
     }
 
