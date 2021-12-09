@@ -29,14 +29,14 @@ if(kugelDurchmesser > 0) {
 double wurfel() {
     double seitenlange;
     inputcube:
-    printf("Gib die Seitenlaenge deines Wuerfels an: \n");
+    printf("Gib die Seitenl\x84nge deines W\x81rfels an: \n");
     while (scanf("%lf%*[0-9]", &seitenlange) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
     if(seitenlange > 0) {
         double wurfel = ((seitenlange * seitenlange) * seitenlange);
-        printf("Das Volumen deines Wuerfels ist: %lf\n", wurfel);
+        printf("Das Volumen deines W\x81rfels ist: %lf\n", wurfel);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputcube;
@@ -50,19 +50,19 @@ double quader() {
     double seitenlang2;
     double seitenlang3;
     inputcuboid:
-        printf("Gib die erste Seitenlaenge deines Quaders an: \n");
+        printf("Gib die erste Seitenl\x84nge deines Quaders an: \n");
         while (scanf("%lf%*[0-9]", &seitenlang1) != 1) {
             printf("Falsche Eingabe! Versuche es erneut\n");
             while (!feof(stdin) && fgetc(stdin) != '\n');
         }
 
-        printf("Gib die erste Seitenlaenge deines Quaders an: \n");
+        printf("Gib die erste Seitenl\x84nge deines Quaders an: \n");
         while (scanf("%lf%*[0-9]", &seitenlang2) != 1) {
             printf("Falsche Eingabe! Versuche es erneut\n");
             while (!feof(stdin) && fgetc(stdin) != '\n');
         }
 
-        printf("Gib die erste Seitenlaenge deines Quaders an: \n");
+        printf("Gib die erste Seitenl\x84nge deines Quaders an: \n");
         while (scanf("%lf%*[0-9]", &seitenlang3) != 1) {
             printf("Falsche Eingabe! Versuche es erneut\n");
             while (!feof(stdin) && fgetc(stdin) != '\n');
@@ -87,7 +87,7 @@ double zylinder() {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    printf("Gib die Hoehe deines Zylinder an: \n");
+    printf("Gib die H\x94he deines Zylinder an: \n");
     while (scanf("%lf%*[0-9]", &zylinderHoehe) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');

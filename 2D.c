@@ -16,26 +16,26 @@ double circle(){
 
     double kRadius = kDiameter / 2;
     double kArea = kRadius * kRadius * pi;
-    printf("Die Flaeche deines Kreises betraegt: %lf\n", kArea);
+    printf("Die Fl\x84che deines Kreises betr\x84gt: %lf\n", kArea);
     return 0;
 }
 
 double square(){
     double sSquare;
-    printf("Gib die Seitenlaenge deines Quadrates an: \n");
+    printf("Gib die Seitenl\x84nge deines Quadrates an: \n");
     while (scanf("%lf%*[0-9]",  &sSquare) != 1){
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
 
     double aSquare = sSquare * sSquare;
-    printf("Die Flaeche deines Qudrates betraegt: %lf\n", aSquare);
+    printf("Die Fl\x84che deines Qudrates betr\x84gt: %lf\n", aSquare);
     return 0;
 }
 
 double rectangle(){
     double sRectangleA;
-    printf("Gib die laenge deines Rechtecks an: \n");
+    printf("Gib die l\x84nge deines Rechtecks an: \n");
     while (scanf("%lf%*[0-9]",  &sRectangleA) != 1){
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
@@ -61,7 +61,7 @@ double triangle() {
 
     }
     double hTriangle;
-    printf("Gib die Hoehe deines Dreiecks an: \n");
+    printf("Gib die H\x94he deines Dreiecks an: \n");
     while (scanf("%lf%*[0-9]", &hTriangle) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
@@ -69,7 +69,7 @@ double triangle() {
 
     double aTriangle = gTriangle * hTriangle / 2;
 
-    printf("Die Flaeche deines Dreiecks betraegt: %lf\n", aTriangle);
+    printf("Die Fl\x84che deines Dreiecks betr\x84gt: %lf\n", aTriangle);
 
 }
 
@@ -77,17 +77,17 @@ double trapez(){
     double trapezGrundlinie;
     double trapezDeckenlinie;
     double trapezHoehe;
-    printf("Gib die Laenge der Grundlinie deines Trapez an (in cm): \n");
+    printf("Gib die L\x84nge der Grundlinie deines Trapez an (in cm): \n");
     while (scanf("%lf%*[0-9]", &trapezGrundlinie) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    printf("Gib die Laenge der Deckenlinie deines Trapez an an (in cm): \n");
+    printf("Gib die L\x84nge der Deckenlinie deines Trapez an an (in cm): \n");
     while (scanf("%lf%*[0-9]", &trapezDeckenlinie) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
     }
-    printf("Gib die Hoehe deines Trapez an an (in cm): \n");
+    printf("Gib die H\x94he deines Trapez an an (in cm): \n");
     while (scanf("%lf%*[0-9]", &trapezHoehe) != 1) {
         printf("Falsche Eingabe! Versuche es erneut\n");
         while (!feof(stdin) && fgetc(stdin) != '\n');
