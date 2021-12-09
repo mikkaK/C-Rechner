@@ -66,7 +66,6 @@ double alk() {
     }
     return 0;
 }
-
 double kalorien() {
     double alter;
     double gewicht;
