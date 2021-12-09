@@ -4,8 +4,9 @@
 #include <ctype.h>
 #include "2D.h"
 #include "3D.h"
-#include "lifescienc.h"
+#include "lifescience.h"
 #include "basecalc.h"
+
 #define MAX_LEN 128
 
 int lena = 0;
