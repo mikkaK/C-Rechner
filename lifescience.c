@@ -2,6 +2,7 @@
 #include "lifescience.h"
 #include <stdio.h>
 
+
 double bmi() {
     double hight;
     double weight;
@@ -19,7 +20,7 @@ double bmi() {
     }
     if(hight > 0 && weight > 0) {
         bmi = (weight / (hight * hight));
-        printf("Dein BMI ist: %lf\n", bmi);
+        printf("Dein BMI ist: %2.lf\n", bmi);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputbmi;
@@ -27,6 +28,7 @@ double bmi() {
 
     return 0;
 }
+
 
 double alc() {
     double alkg;
@@ -58,13 +60,14 @@ double alc() {
     }
     if(alkg > 0 && weight > 0) {
         alk = (alkg / (weight * factor));
-        printf("Dein Alkoholgehalt ist: %lf Promille\n", alk);
+        printf("Dein Alkoholgehalt ist: %2.lf Promille\n", alk);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputalk;
     }
     return 0;
 }
+
 double calorie() {
     double age;
     double weight;
@@ -109,7 +112,7 @@ double calorie() {
     }
     if(age > 0 && height > 0 && weight > 0) {
         dailycal = (factor + (factor2 * weight) + (factor3 * height) - (factor4 * age));
-        printf("Dein t\x84glicher Kalorienbedarf ist: %lf Kalorien\n", dailycal);
+        printf("Dein t\x84glicher Kalorienbedarf ist: %2.lf Kalorien\n", dailycal);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputcalories;
