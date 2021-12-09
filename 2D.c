@@ -9,26 +9,29 @@
 #define pi 3.1415926
 
 double circle() {
-    double kDiameter;
+    double cDiameter;
+    double cRadius;
+    double cArea;
     dCheck:
     printf("Gib den Durchmesser deines Kreises an: \n");
-    while (scanf("%lf%*[0-9]", &kDiameter) != 1) {
+    while (scanf("%lf%*[0-9]", &cDiameter) != 1) {
         error1();
     }
 
-    if (kDiameter < 0) {
+    if (cDiameter < 0) {
         error2();
         goto dCheck;
     }
 
-    double kRadius = kDiameter / 2;
-    double kArea = kRadius * kRadius * pi;
-    printf("Die Fl\x84""che deines Kreises betr\x84gt: %lf\n", kArea);
+    cRadius = cDiameter / 2;
+    cArea = cRadius * cRadius * pi;
+    printf("Die Fl\x84""che deines Kreises betr\x84gt: %lf\n", cArea);
     return 0;
 }
 
 double square() {
     double sSquare;
+    double aSquare;
     squareCheck:
     printf("Gib die Seitenl\x84nge deines Quadrates an: \n");
     while (scanf("%lf%*[0-9]", &sSquare) != 1) {
@@ -40,13 +43,15 @@ double square() {
         goto squareCheck;
     }
 
-    double aSquare = sSquare * sSquare;
+    aSquare = sSquare * sSquare;
     printf("Die Fl\x84""che deines Qudrates betr\x84gt: %lf\n", aSquare);
     return 0;
 }
 
 double rectangle() {
     double sRectangleA;
+    double sRectangleB;
+    double aRectangle;
     rACheck:
     printf("Gib die l\x84nge deines Rechtecks an: \n");
     while (scanf("%lf%*[0-9]", &sRectangleA) != 1) {
@@ -58,8 +63,6 @@ double rectangle() {
         goto rACheck;
     }
 
-
-    double sRectangleB;
     rBCheck:
     printf("Gib die breite deines Rechtecks an: \n");
     while (scanf("%lf%*[0-9]", &sRectangleB) != 1) {
@@ -71,7 +74,7 @@ double rectangle() {
         goto rBCheck;
     }
 
-    double aRectangle = sRectangleA * sRectangleB;
+    aRectangle = sRectangleA * sRectangleB;
     printf("Die Fl\x84""che deines Rechtecks betr\x84gt: %lf\n", aRectangle);
     return 0;
 }

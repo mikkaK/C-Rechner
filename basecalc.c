@@ -10,7 +10,7 @@
  * and open the template in the editor.
  */
 #include <stdio.h>
-#include <stdlib.h>
+
 
 
 double sum() {
