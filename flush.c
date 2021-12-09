@@ -14,4 +14,5 @@ char error1(){
 char error2(){
     printf("Eingabe darf nicht kleiner als 0 sein\n");
     while (!feof(stdin) && fgetc(stdin) != '\n');
+    return 0;
 }
