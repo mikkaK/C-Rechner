@@ -16,7 +16,7 @@ double circle(){
 
     double kRadius = kDiameter / 2;
     double kArea = kRadius * kRadius * pi;
-    printf("Die Fflaeche deines Kreises betraegt: %lf\n", kArea);
+    printf("Die Flaeche deines Kreises betraegt: %lf\n", kArea);
     return 0;
 }
 
@@ -71,4 +71,28 @@ double triangle() {
 
     printf("Die Flaeche deines Dreiecks betraegt: %lf\n", aTriangle);
 
+}
+
+double trapez(){
+    double trapezGrundlinie;
+    double trapezDeckenlinie;
+    double trapezHoehe;
+    printf("Gib die Laenge der Grundlinie deines Trapez an (in cm): \n");
+    while (scanf("%lf%*[0-9]", &trapezGrundlinie) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        while (!feof(stdin) && fgetc(stdin) != '\n');
+    }
+    printf("Gib die Laenge der Deckenlinie deines Trapez an an (in cm): \n");
+    while (scanf("%lf%*[0-9]", &trapezDeckenlinie) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        while (!feof(stdin) && fgetc(stdin) != '\n');
+    }
+    printf("Gib die Hoehe deines Trapez an an (in cm): \n");
+    while (scanf("%lf%*[0-9]", &trapezHoehe) != 1) {
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        while (!feof(stdin) && fgetc(stdin) != '\n');
+    }
+    double trapez = ((trapezGrundlinie + trapezDeckenlinie) / 2) * trapezHoehe;
+    printf("Das Volumen deines Trapez ist: %lf cm^3\n", trapez);
+    return 0;
 }

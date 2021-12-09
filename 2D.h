@@ -5,4 +5,9 @@
 #ifndef C_RECHNER_2D_H
 #define C_RECHNER_2D_H
 
+double square();
+double rectangle();
+double triangle();
+double circle();
+double trapez();
 #endif //C_RECHNER_2D_H

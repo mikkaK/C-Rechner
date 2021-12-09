@@ -15,20 +15,26 @@
 
 double sum() {
 
-    double a = 0.00;
-    double b = 0.00;
-    double x = 0.00;
+    double a = 0;
+    double b = 0;
+    double x = 0;
 
     printf("Geben Sie den ersten Summanden ein:\n");
-    scanf("%lf", &a);
-    system("cls");
+    while (scanf("%lf%*[0-9]",  &a) != 1){
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        while (!feof(stdin) && fgetc(stdin) != '\n');
+    }
 
     printf("Geben Sie den zweiten Summanden ein:\n");
-    scanf("%lf", &b);
-    system("cls");
+    while (scanf("%lf%*[0-9]",  &b) != 1){
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        while (!feof(stdin) && fgetc(stdin) != '\n');
+    }
 
     x = a+b;
 
+    printf("Das Ergebnis lautet: %lf\n", x);
+    
     return x;
 }
 
@@ -48,7 +54,9 @@ double sub() {
     system("cls");
 
     x = a-b;
-
+    
+    printf("Das Ergebnis lautet: %lf\n", x);
+    
     return x;
 }
 
@@ -71,7 +79,9 @@ double divi() {
     }else {
         x = a/b;
     }
-
+    
+    printf("Das Ergebnis lautet: %lf\n", x);
+    
     return x;
 }
 
@@ -90,6 +100,8 @@ double mult() {
     system("cls");
 
     x = a*b;
+    
+    printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
 }
@@ -117,6 +129,8 @@ double expo() {
             x = a*x;
         }
     }
+    
+    printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
 }
@@ -137,6 +151,8 @@ double wurz() {
         x = (a / x + x) / 2;
         if (b == a + 1) { break; }
     }
+    
+    printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
 }
@@ -153,6 +169,8 @@ double fak() {
     for(a; a > 0; a--){
         x=a*x;
     }
+    
+    printf("Das Ergebnis lautet: %lf\n", x);
 
     return x;
 }
