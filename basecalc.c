@@ -20,11 +20,17 @@ double sum() {
     double x = 0.00;
 
     printf("Geben Sie den ersten Summanden ein:\n");
-    scanf("%lf", &a);
+    while (scanf("%lf%*[0-9]",  &a) != 1){
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        while (!feof(stdin) && fgetc(stdin) != '\n');
+    }
     system("cls");
 
     printf("Geben Sie den zweiten Summanden ein:\n");
-    scanf("%lf", &b);
+    while (scanf("%lf%*[0-9]",  &b) != 1){
+        printf("Falsche Eingabe! Versuche es erneut\n");
+        while (!feof(stdin) && fgetc(stdin) != '\n');
+    }
     system("cls");
 
     x = a+b;
