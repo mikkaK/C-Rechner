@@ -136,7 +136,7 @@ double divi() {
         
         if (0 == a) {
             printf("Fehler, die Zahl kann nicht durch 0 geteilt werden!");
-            goto fehler:
+            goto fehler;
         } else {
             x = x / a;
         }
