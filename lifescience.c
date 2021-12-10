@@ -60,7 +60,7 @@ double alc() {
     }
     if(alkg > 0 && weight > 0) {
         alk = (alkg / (weight * factor));
-        printf("Dein Alkoholgehalt ist: %2.lf Promille\n", alk);
+        printf("Dein Alkoholgehalt ist: %lf Promille\n", alk);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputalk;
