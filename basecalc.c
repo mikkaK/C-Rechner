@@ -18,7 +18,7 @@
 double loop() {
     
     char c;
-    double b = 0;
+    double b;
     
     fflush(stdin);
 frage:
@@ -166,7 +166,7 @@ double expo() {
 
     double a = 0.00;
     double b = 0.00;
-    double x = 0.00;
+    double x;
 
     printf("Geben Sie die Basis ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
@@ -183,7 +183,7 @@ double expo() {
     if (0 == b) {
         x = 1;
     } else {
-        for (b; b > 1; b--) {
+        for (int i =b; i > 1; i--) {
             x = a * x;
         }
     }
@@ -197,7 +197,7 @@ double wurz() {
 
     double a = 0.00;
     double b = 0.00;
-    double c = 0.00;
+    double c;
     double x = 1.00;
 
     printf("Geben Sie den Radikanden ein:\n");
@@ -241,7 +241,7 @@ double fak() {
         error1();
     }
 
-    for (a; a > 0; a--) {
+    for (int i = a; i > 0; i--) {
         x = a * x;
     }
 
