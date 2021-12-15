@@ -236,7 +236,7 @@ double fak() {
     double a = 0.00;
     double x = 1.00;
 
-    printf("Geben Sie den Fakultätswert ein:\n");
+    printf("Geben Sie den Fakult\x84""tswert ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
         error1();
     }

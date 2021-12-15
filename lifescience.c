@@ -20,7 +20,7 @@ double bmi() {
     }
     if(hight > 0 && weight > 0) {
         bmi = (weight / (hight * hight));
-        printf("Dein BMI ist: %2.lf\n", bmi);
+        printf("Dein BMI ist: %.2lf\n", bmi);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputbmi;
@@ -113,7 +113,7 @@ double calorie() {
     }
     if(age > 0 && height > 0 && weight > 0) {
         dailycal = (factor + (factor2 * weight) + (factor3 * height) - (factor4 * age));
-        printf("Dein t\x84glicher Kalorienbedarf ist: %2.lf Kalorien\n", dailycal);
+        printf("Dein t\x84glicher Kalorienbedarf ist: %.2lf Kalorien\n", dailycal);
     }else{
         printf("Falsche Eingabe! Versuche es erneut\n");
         goto inputcalories;
