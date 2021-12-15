@@ -14,18 +14,17 @@
 #include <ctype.h>
 
 
-
 double loop() {
-    
+
     char c;
-    double b = 0;
-    
+    double b;
+
     fflush(stdin);
-frage:
+    frage:
     printf("M\x94""chten Sie eine weitere Zahl hinzuf\x81gen: <Y>=JA <N>=NEIN\n");
     scanf("%c", &c);
-    
-    switch(toupper(c)){
+
+    switch (toupper(c)) {
         case 'Y':
             b = 0;
             break;
@@ -39,7 +38,7 @@ frage:
             goto frage;
 
     }
-    
+
     return b;
 }
 
@@ -55,15 +54,15 @@ double sum() {
         error1();
     }
 
-    while(1 != b){
-        
+    while (1 != b) {
+
         printf("Geben Sie den n\x84""chsten Summanden ein:\n");
         while (1 != scanf("%lf%*[0-9]", &a)) {
             error1();
         }
-        
+
         x = a + x;
-        
+
         b = loop();
     }
 
@@ -82,16 +81,16 @@ double sub() {
     while (1 != scanf("%lf%*[0-9]", &x)) {
         error1();
     }
-    
-    while(1 != b){
-        
+
+    while (1 != b) {
+
         printf("Geben Sie den Subtrahenden ein:\n");
         while (1 != scanf("%lf%*[0-9]", &a)) {
             error1();
         }
-        
+
         x = x - a;
-        
+
         b = loop();
     }
 
@@ -110,27 +109,27 @@ double divi() {
     while (1 != scanf("%lf%*[0-9]", &x)) {
         error1();
     }
-    
-    while(1 != b){
-        
+
+    while (1 != b) {
+
         fehler:
         printf("Geben Sie den Divisor ein:\n");
         while (1 != scanf("%lf%*[0-9]", &a)) {
             error1();
         }
-        
+
         if (0 == a) {
             printf("Fehler, die Zahl kann nicht durch 0 geteilt werden!");
             goto fehler;
         } else {
             x = x / a;
         }
-        
+
         b = loop();
     }
-    
+
     printf("Das Ergebnis lautet: %lf\n", x);
-    
+
     return x;
 }
 
@@ -144,16 +143,16 @@ double mult() {
     while (1 != scanf("%lf%*[0-9]", &x)) {
         error1();
     }
-    
-    while(1 != b){
-        
+
+    while (1 != b) {
+
         printf("Geben Sie den Multiplikanden ein:\n");
         while (1 != scanf("%lf%*[0-9]", &a)) {
             error1();
         }
-        
+
         x = x * a;
-        
+
         b = loop();
     }
 
@@ -166,7 +165,7 @@ double expo() {
 
     double a = 0.00;
     double b = 0.00;
-    double x = 0.00;
+    double x;
 
     printf("Geben Sie die Basis ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
@@ -183,7 +182,7 @@ double expo() {
     if (0 == b) {
         x = 1;
     } else {
-        for (b; b > 1; b--) {
+        for (int i = b; i > 1; i--) {
             x = a * x;
         }
     }
@@ -197,7 +196,7 @@ double wurz() {
 
     double a = 0.00;
     double b = 0.00;
-    double c = 0.00;
+    double c;
     double x = 1.00;
 
     printf("Geben Sie den Radikanden ein:\n");
@@ -236,12 +235,12 @@ double fak() {
     double a = 0.00;
     double x = 1.00;
 
-    printf("Geben Sie den Fakultätswert ein:\n");
+    printf("Geben Sie den Fakult\x84""tswert ein:\n");
     while (1 != scanf("%lf%*[0-9]", &a)) {
         error1();
     }
 
-    for (a; a > 0; a--) {
+    for (int i = a; i > 0; i--) {
         x = a * x;
     }
 

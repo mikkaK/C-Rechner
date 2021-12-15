@@ -100,7 +100,7 @@ int checker(char *a, int n) {
 
     if (1 != n && 2 != n) {
         newa = (float) strtod(a, NULL);
-        if ( 1 == newa) {
+        if (1 == newa) {
             printf("\n");
             printf("Basic Rechnungen: \n");
             printf(" \t ----------------------- \n");
@@ -419,17 +419,17 @@ int cont() {
 
         no = 0;
         conti = strcmp(y, str2);
-        if ( 0 != strcmp(y, str2)) {
-            if ( 0 != strcmp(y, str1)) {
+        if (0 != strcmp(y, str2)) {
+            if (0 != strcmp(y, str1)) {
                 printf("ERROR: ung\x81ltige Eingabe\n");
                 no = 1;
             }
-        } else if ( 0 == strcmp(y, str1)) {
+        } else if (0 == strcmp(y, str1)) {
             exit(0);
         } else {
             no = 0;
         }
         system("cls");
-    } while ( 0 != no);
+    } while (0 != no);
     return conti;//loop
 }
